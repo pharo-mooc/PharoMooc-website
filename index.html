@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Pharo MOOC: Live Object Programming in Pharo</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/mooc.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#weeks" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img alt="Pharo" src="pictures/pharo-logo-small.png">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="weeks">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#intro">The Mooc</a></li>
+                        <li><a href="#week1">Week 1</a></li>
+                        <li><a href="#week2">Week 2</a></li>
+                        <li><a href="#week3">Week 3</a></li>
+                        <li><a href="#week4">Week 4</a></li>
+                        <li><a href="#week5">Week 5</a></li>
+                        <li><a href="#week6">Week 6</a></li>
+                        <li><a href="#week7">Week 7</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div> <!-- navbar-collapse -->
+            </div> <!-- container-fluid -->
+        </nav>
+        <div class="container">
+            <section id="intro">
+                <h1>About this course</h1>
+                <p>If you are either a beginner or an expert in object-oriented programming, this MOOC will change the way you program with objects: come and learn or rediscover object-oriented programming with Pharo! <a href="#about-details" data-toggle="collapse">more…</a></p>
+
+                <div class="collapse" id="about-details">
+                    <p>Pharo is a pure object-oriented programming language in
+                        the tradition of Smalltalk. It offers a unique developing
+                        experience in constant interaction with live objects.
+                        Pharo is elegant, fun to use and very powerful. It is very
+                        easy to learn and enables to understand advanced concept
+                        in a natural way. When programming in Pharo, you are
+                        immersed in a world of live objects. You have immediate
+                        feedback at any moment of your development on objects
+                        representing web applications, code itself, graphics,
+                        network…</p>
+
+                    <p>Pharo is also a very powerful open-source environment
+                        used by companies to develop web applications.</p>
+
+                    <p>In this MOOC, we will present more specifically Pharo’s
+                        Web stack which changes the way you build web
+                        applications.</p>
+
+                    <p>In addition we will present fundamental programming
+                        concepts and how Pharo uses them. We will present some
+                        coding idioms and Design Patterns to better design
+                        object-oriented applications. Such concepts can be applied
+                        to any object-oriented programming language.</p>
+
+                    <p>This MOOC is intended for people with a programming
+                        experience but everyone motivated could follow the course
+                        thanks to the numerous resources proposed. This MOOC will
+                        also have an interest for computer programming teachers:
+                        Pharo is a good teaching tool for object-oriented
+                        programming and the course will discuss object-oriented
+                        design principles (e.g. polymorphism, message sending,
+                        self/super, design patterns).</p>
+
+                    <p>Throughout this MOOC you will :</p>
+
+                    <ul>
+                        <li>learn how to program in Pharo,</li>
+                        <li>be immersed in a live environment and live a new
+                            programming experience,</li>
+                        <li>develop a web application to apply the different
+                            aspects of Pharo presented in the course.</li>
+                    </ul>
+                    <p>This MOOC will also provide a new vision of the
+                        fundamental principles of object-oriented programming,
+                        i.e. polymorphism and late binding.</p>
+
+                    <p>This course lasts 7 weeks.</p>
+                    <p>Each week is composed of several sequences containing a
+                        video lecture, quizzes and other videos proposing
+                        application exercises and programming demonstrations.</p>
+                    <p>This course is proposed in french and in english.
+                        Videos are in french with french and english subtitles.
+                        Pdf course documents (in english only) will be available.
+                        All other materials (quizzes, explanation texts…) will be
+                        offered in both languages.</p>
+                </div> <!-- details -->
+                <div class="course-image img-responsive center-block">
+                    <img alt="Teaser video" src="pictures/teaser.jpg">
+                </div>
+                <div class="center-block">
+                    <a role="button" class="btn btn-success btn-lg"
+                       href="https://ci.inria.fr/pharo-contribution/job/PharoWeb/PHARO=40,VERSION=stable,VM=vm/lastSuccessfulBuild/artifact/PharoWeb.zip">
+                        Download<br /><small>Pharo 4.0</small>
+                    </a>
+                    <a role="button" class="btn btn-success btn-lg"
+                       href="https://ci.inria.fr/pharo-contribution/job/PharoWeb/PHARO=50,VERSION=stable,VM=vm/lastSuccessfulBuild/artifact/PharoWeb.zip">
+                        Download<br /><small>Pharo 5.0</small>
+                    </a>
+                </div>
+            </section>
+            <section id="week1">
+                <h1>Week 1: Welcome on Board and Syntax Discovery</h1>
+                <ol>
+                    <li>[Lecture] Objectives of this MOOC</li>
+                    <li>[Lecture] Pharo: an Immersive Object-Oriented System</li>
+                    <li>[Lecture] Pharo Vision</li>
+                    <li>[Lecture] Pharo Object Model in a Nutshell</li>
+                    <li>[Lecture] Pharo Syntax in a Nutshell</li>
+                    <li>[Lecture] Class and Method Definitions</li>
+                    <li>[Live] Selecting and executing expressions</li>
+                    <li>[Live] Learn Pharo with Prof Stef</li>
+                    <li>[Live] Syntax Highlighting gives Feedback</li>
+                    <li>[Live] Learn Keyboard Shortcuts</li>
+                    <li>[Redo] Coding a Counter</li>
+                    <li>[Exercise] Expressions and Messages</li>
+                    <li>[Exercise] TinyBlog: Presentation and Model</li>
+                    <li>[Challenge] Challenge 0</li>
+                </ol>
+            </section>
+            <section id="week2">
+                <h1>Week 2: Pharo Syntax, Blocks and Inspector</h1>
+                <ol>
+                    <li>[Lecture] Understanding Messages</li>
+                    <li>[Lecture] Messages for Java programmer</li>
+                    <li>[Lecture] Messages: Composition and Precedence</li>
+                    <li>[Lecture] Understanding Messages: Sequence and Cascade</li>
+                    <li>[Live] Finding Methods with Finder</li>
+                    <li>[Live] GTInspector 1: Inspect and Interact with Objects</li>
+                    <li>[Lecture] Introduction to Blocks</li>
+                    <li>[Lecture] Loops</li>
+                    <li>[Lecture] Booleans and Conditions</li>
+                    <li>[Lecture] Parenthesis vs Square Brackets</li>
+                    <li>[Lecture] Yourself</li>
+                    <li>[Lecture] The Essence of Dispatch through an Exercise</li>
+                    <li>[Live] Nautilus 1: First Meet with the Code Browser</li>
+                    <li>[Live] Nautilus 2: Packages, Tags and Groups</li>
+                    <li>[Live] Nautilus 3: Inheritance view</li>
+                    <li>[Redo] Coding a Counter in the Debugger</li>
+                    <li>[Exercise] Solution: Expressions and Messages</li>
+                    <li>[Exercise] Expression Results</li>
+                    <li>[Exercise] TinyBlog: Extending and Testing the Model</li>
+                    <li>[Challenge] Solution: Challenge 0</li>
+                    <li>[Challenge] Challenge 1</li>
+                </ol>
+            </section>
+            <section id="week3">
+                <h1>Week 3: Design, Class Methods and Collections</h1>
+                <ol>
+                    <li>[Lecture] Essence of Dispatch: Taking Pharo Booleans as Example</li>
+                    <li>[Lecture] Essence of Dispatch</li>
+                    <li>[Lecture] Variables</li>
+                    <li>[Lecture] A Simple HTTP Application: a Pretext to Revisit Pharo Syntax</li>
+                    <li>[Live] Nautilus 4: How to Become a Super Pharo Developer: Understanding Sender and Implementors</li>
+                    <li>[Live] Nautilus 5: Navigating Fast Inside Classes</li>
+                    <li>[Lecture] Class Methods</li>
+                    <li>[Lecture] An Overview of Essential Collections</li>
+                    <li>[Live] Spotter 1: Find and Browse a Class</li>
+                    <li>[Live] Spotter 2: Filter Results by Category</li>
+                    <li>[Lecture] Iterators</li>
+                    <li>[Lecture] Stream Overview</li>
+                    <li>[Lecture] Understanding Return</li>
+                    <li>[Redo] Coding a Little Domain Specific Language</li>
+                    <li>[Exercise] Solution: Expression Results</li>
+                    <li>[Exercise] Rewriting Expressions</li>
+                    <li>[Exercise] TinyBlog: A Simple Teapot Web Interface</li>
+                    <li>[Challenge] Solution: Challenge 1</li>
+                    <li>[Challenge] Challenge 2</li>
+                </ol>
+            </section>
+            <section id="week4">
+                <h1>Week 4: Inheritance & Lookup and Web Development</h1>
+                <ol>
+                    <li>[Lecture] Inheritance Basics</li>
+                    <li>[Lecture] Inheritance & Lookup: Lookup</li>
+                    <li>[Lecture] Inheritance & Lookup: Super</li>
+                    <li>[Lecture] Inheritance & Lookup: DoesNotUnderstand:</li>
+                    <li>[Lecture] Inheritance & Lookup: Lookup in Metaclasses</li>
+                    <li>[Lecture] Class Methods at Work</li>
+                    <li>[Lecture] Overview of Pharo Web Stack</li>
+                    <li>[Lecture] Seaside: an Innovative Web Application Framework</li>
+                    <li>[Lecture] Seaside: Rendering Components</li>
+                    <li>[Lecture] Seaside: a Glance at MetaData and REST</li>
+                    <li>[Lecture] Voyage: NoSql Object Database</li>
+                    <li>[Live] How to load code from repository</li>
+                    <li>[Live] How to load projects</li>
+                    <li>[Live] Nautilus 6: An overview of Refactorings</li>
+                    <li>[Live] Nautilus 7: Using the Quality Assistant and Code Critic</li>
+                    <li>[Exercise] Solution: Rewriting Expressions</li>
+                    <li>[Exercise] TinyBlog: Data Persitency using Voyage and Mongo</li>
+                    <li>[Exercise] TinyBlog: Building a Web Interface with Seaside</li>
+                    <li>[Exercise] Building a Simple Contact Book Application</li>
+                    <li>[Challenge] Solution: Challenge 2</li>
+                    <li>[Challenge] Challenge 3</li>
+                </ol>
+            </section>
+            <section id="week5">
+                <h1>Week 5: Exception, Debugging and Reflection</h1>
+                <ol>
+                    <li>[Lecture] Seaside: Composing Components</li>
+                    <li>[Lecture] Really Understanding Class Methods</li>
+                    <li>[Lecture] Common Errors</li>
+                    <li>[Lecture] Powerful Exceptions: an Overview</li>
+                    <li>[Lecture] Debugging in Pharo</li>
+                    <li>[Lecture] SUnit: Unit Tests in Pharo</li>
+                    <li>[Lecture] Files in Pharo</li>
+                    <li>[Lecture] Reflection: Basic Introspection</li>
+                    <li>[Lecture] Benchmarking in Pharo</li>
+                    <li>[Live] Spotter 3: Scoping and Reducing Search</li>
+                    <li>[Live] Spotter 6: Search, Navigate and Preview Files</li>
+                    <li>[Live] Learning the Debugger</li>
+                    <li>[Live] How to find a bug?</li>
+                    <li>[Live] GTInspector 2: Inspect Files and Directories</li>
+                    <li>[Exercise] TinyBlog: Building an Admin Seaside Web Interface with Magritte</li>
+                    <li>[Exercise] TinyChat</li>
+                    <li>[Challenge] Solution: Challenge 3</li>
+                    <li>[Challenge] Challenge 4</li>
+                </ol>
+            </section>
+            <section id="week6">
+                <h1>Week 6: Rethink Lookup and Advanced Object-Oriented Design</h1>
+                <ol>
+                    <li>[Lecture] Did You Really Understand Super?</li>
+                    <li>[Lecture] Understanding the Implementation of ifTrue:ifFalse:</li>
+                    <li>[Lecture] Dice new vs. self class new</li>
+                    <li>[Lecture] Message sends are plans for reuse</li>
+                    <li>[Lecture] Hooks and Templates</li>
+                    <li>[Lecture] Runtime Architecture</li>
+                    <li>[Lecture] Characters, Strings and Symbols</li>
+                    <li>[Lecture] Dynamic Vs. Literal Arrays</li>
+                    <li>[Live] Understanding Images and Changes Files</li>
+                    <li>[Live] Using the Pharo Launcher to manage your Pharo images</li>
+                    <li>[Live] Diffing and Merging in Pharo</li>
+                    <li>[Live] GTInspector 4: Build Custom Tab Views for your Objects</li>
+                    <li>[Exercise] TinyBlog: Deployment</li>
+                    <li>[Challenge] Solution: Challenge 4</li>
+                    <li>[Challenge] Challenge 5</li>
+                </ol>
+            </section>
+            <section id="week7">
+                <h1>Week 7: More on Object-Oriented Design and Testing</h1>
+                <ol>
+                    <li>[Lecture] Advanced Points on Classes</li>
+                    <li>[Lecture] Variable Size Objects</li>
+                    <li>[Lecture] Understanding Metaclasses</li>
+                    <li>[Lecture] Reflective Operations for Live Programming</li>
+                    <li>[Lecture] DoesNotUnderstand: a Precious Hook</li>
+                    <li>[Lecture] Reflection: Stack as an Object</li>
+                    <li>[Lecture] Avoid Null Checks</li>
+                    <li>[Lecture] A Journey in Pharo: A Bright Future</li>
+                    <li>[Live] Spotter 4: The Preview pane</li>
+                    <li>[Live] Spotter 5: Search in Playground History</li>
+                    <li>[Live] GTInspector 3: Understand Pharo Internals by Inspection</li>
+                    <li>[Challenge] Solution: Challenge 5</li>
+                </ol>
+            </section>
+            <section id="about">
+                <h1>About</h1>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <section>
+                            <img alt="Damien Cassou" src="pictures/dcassou.jpg" class="teacher"/>
+                            <h3>Damien Cassou</h3>
+                            <p>Damien Cassou received his PhD degree
+                                in Computer Science from the
+                                University of Bordeaux, France. He is
+                                working as associate professor (maître
+                                de conférences) at the University of
+                                Lille, France, and is a member of the
+                                RMoD research group (Inria, CRIStAL).
+                                Damien is working on dynamic
+                                programming languages (most notably
+                                around traits and modules) and
+                                software engineering (mainly tools for
+                                developers). Damien has co-organized
+                                many events (including ECOOP’14 and
+                                ESUG many times) and co-wrote several
+                                books. He is also an active member of
+                                the Smalltalk and Emacs-Lisp
+                                communities.</p>
+                        </section>
+                    </div>
+                    <div class="col-xs-4">
+                        <section>
+                            <img alt="Stéphane Ducasse" src="pictures/sducasse.jpg" class="teacher"/>
+                            <h3>Stéphane Ducasse</h3>
+                            <p>Stéphane Ducasse is directeur de
+                                recherche at Inria. He leads the RMoD
+                                team. He is expert in two domains:
+                                object-oriented language design and
+                                reengineering. His works on traits
+                                have been introduced in AmbientTalk,
+                                Slate, Pharo, Perl-6, PHP 5.4 and
+                                Squeak. They have also
+                                influencedJavaScript, Scala and
+                                Fortress. Stéphane is also expert on
+                                software quality, program
+                                understanding, program visualisations,
+                                reengineering and metamodeling. He is
+                                one of the developers of Pharo. He is
+                                also one of the developers of Moose,
+                                an open-source software analysis
+                                platform . He created Synectique a
+                                company building dedicated tools for
+                                advanced software analysis. Stéphane
+                                wrote several books on programming
+                                learning and other topics such as web
+                                programming.</p>
+                        </section>
+                    </div>
+                    <div class="col-xs-4">
+                        <section>
+                            <img alt="Luc Fabresse" src="pictures/lfabresse.jpg" class="teacher"/>
+                            <h3>Luc Fabresse</h3>
+                            <p>Luc Fabresse received his PhD in
+                                computer science in 2007 from the
+                                University of Montpellier 2,
+                                France. He is currently an
+                                associate professor in the CAR
+                                research theme at Mines Douai,
+                                Mines-Telecom Institute. Luc is
+                                the co-author of several research
+                                papers advocating the use of
+                                dynamic and reflective languages
+                                such as Pharo to support live
+                                programming of mobile and
+                                autonomous robots in an efficient
+                                way. Luc's long-term vision is to
+                                be able to use Jedi mind trick on
+                                mobile robots ;-) Meanwhile, he
+                                concretizes all his ideas (models
+                                and tools) in the PhaROS plateform
+                                (a Pharo client for the Robotics
+                                Operating System) to develop,
+                                debug, test, deploy, execute and
+                                benchmark robotics applications.
+                                Each year, Luc gives many computer
+                                science lectures and co-organizes
+                                events (technical days,
+                                conferences, ...). He also
+                                promotes Smalltalk (ESUG board
+                                member) and participates to its
+                                open-source implementation Pharo.</p>
+                        </section>
+                    </div> <!-- column -->
+                </div> <!-- row -->
+            </section>
+            <section>
+                <h2>The Partners</h2>
+                <div class="partners-logos">
+                    <a href="http://www.inria.fr/" target="_blank">
+                        <img alt="logo inria recherche" src="pictures/logo_inria_fr-ptt.jpeg" height="60">
+                    </a>
+                    <a href="http://www.agence-nationale-recherche.fr/investissements-d-avenir/appels-a-projets/" target="_blank">
+                        <img alt="logo investissement d'avenir" src="pictures/InvestAvenir.jpg" height="60" width="60">
+                    </a>
+                    <a href="http://utop.fr/" target="_blank">
+                        <img src="pictures/logo_uTOP.jpg" alt="logo utop" height="60" width="150">
+                    </a>
+                    <a href="http://www.unit.eu/fr" target="_blank">
+                        <img alt="logo unit" src="pictures/unit.png" height="80">
+                    </a>
+                    <a href="http://www.unisciel.fr/" target="_blank">
+                        <img alt="logo unisciel" src="pictures/logo_Unisciel.png" height="80">
+                    </a>
+                    <a href="http://www.univ-lille.fr/" target="_blank">
+                        <img alt="logo Université de Lille" src="pictures/universite-lille.png" height="80">
+                    </a>
+                    <a href="http://www2.mines-douai.fr/" target="_blank">
+                        <img alt="logo Mines de Douai" src="pictures/Mines_Douai.png" height="100">
+                    </a>
+                    <a href="https://www.mines-telecom.fr/" target="_blank">
+                        <img alt="logo Mines Telecom" src="pictures/mines-telecom.png" height="100">
+                    </a>
+                </div> <!-- partners-logos -->
+            </section>
+        </div> <!-- end of container -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="pictures/https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+        </script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="pictures/js/bootstrap.min.js">
+        </script>
+    </body>
+</html>
