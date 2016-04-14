@@ -27,6 +27,11 @@ html, body {
     padding: 0 40px;
 }
 
+h1 {
+    font-weight: bold;
+    padding: 32px;
+}
+
 /* Teacher photos */
 img.teacher {
     width: 100px;
