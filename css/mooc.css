@@ -38,6 +38,7 @@ html, body {
 h1 {
     font-weight: bold;
     padding: 32px;
+    text-align: center;
 }
 
 /* Teacher photos */
