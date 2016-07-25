@@ -141,14 +141,14 @@
                 <p>To get a version of Pharo ready for the MOOC, please follow these steps:</p>
                 <ol>
                     <li>Download and install the <a href="http://pharo.org/download-50">Pharo Virtual Machine (VM)</a>
-						  <br/>Only for <strong>linux users</strong> (tested on Unbutu 16.04):  
-<pre><code class="bash">sudo dpkg --add-architecture i386
-sudo apt-get update 
+			<br/>Only for <strong>linux users</strong> (tested on Unbutu 16.04):
+                        <pre><code class="bash">sudo dpkg --add-architecture i386
+sudo apt-get update
 sudo apt-get install libx11-6:i386 libgl1-mesa-glx:i386 libfontconfig1:i386 libssl1.0.0:i386
 curl http://get.pharo.org/vm50 | bash
 # you now have a pharo-ui script in the current folder to launch pharo images
-</code></pre>					  
-						  </li>
+                        </code></pre>
+		    </li>
                     <li>Download and unzip the <a href="https://ci.inria.fr/pharo-contribution/job/PharoWeb/PHARO=50,VERSION=stable,VM=vm/lastSuccessfulBuild/artifact/PharoWeb.zip">PharoWeb</a> which is a Pharo 5.0 image specifically prepared for the MOOC</li>
                     <li>Run the PharoWeb image with the Pharo virtual machine:
                         <ul>
