@@ -49,8 +49,62 @@ img.teacher {
     float: left;
 }
 
+li {
+	margin-bottom:2px;
+}
+
 /* Put some space around partner's logos */
 .partners-logos img {
     margin-left: 5px;
     margin-right: 5px;
 }
+
+.myicon {
+	border-radius: 4px;
+   padding: 2px; 
+   /*width: 25px;*/
+   height: 20px;
+	color: white;
+	background-color: gray;
+/*	font-size: 110% !important;*/
+	align:center;
+}
+
+.labels {
+	border: 1px solid black;
+}
+
+.label {
+	position: relative;
+	top: -1px;
+   padding-top: 4px;
+   padding-bottom: 4px;
+   margin-bottom: 2px;
+	vertical-align: center;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   font-size: 78%;
+}
+
+.newbie {
+	background-color: #AA2DC2;
+}
+
+.oo {
+	background-color: #FFE70D;
+}
+
+
+.web {
+	background-color: #1126cb;
+}
+
+.magic {
+	background-color: #1E1F1E;
+}
+
+.expert {
+	background-color: #c92626; 
+	padding-left:4px;
+}
+
