@@ -186,9 +186,52 @@
 					</ul>
 
 					</section>
-
-						
+	
 				</section>
+
+
+           <section id="download">
+               <h2>Download Pharo</h2>
+					
+					<p>During this MOOC, we assume that you use exacty this MOOC specific version of Pharo. To install it, please follow these steps:</p>
+               
+					<div class="teaser">
+					<ol>
+					<li>Download the <strong>Pharo Virtual Machine</strong> (VM) for your Operating System:
+						
+						
+							<a class="btn download" href="http://files.pharo.org/platform/Pharo5.0-mac.zip"><i class="fa fa-apple"></i> Mac OsX</a>
+							<a class="btn download" href="http://files.pharo.org/platform/Pharo5.0-win.zip"><i class="fa fa-windows"></i> Windows</a>
+							<!-- <a class="btn download" href="http://pharo.org/gnu-linux-installation-50"><i class="fa fa-linux"></i> GNU/Linux</a> -->
+							<a class="btn download" href="http://files.pharo.org/platform/Pharo5.0-linux.zip"><i class="fa fa-linux"></i> GNU/Linux</a>
+						
+					</li>
+					
+					<li>Download the MOOC specific <strong>PharoWeb Image</strong>: 					
+
+					<a class="btn download" href="https://ci.inria.fr/pharo-contribution/job/PharoWeb/PHARO=50,VERSION=stable,VM=vm/lastSuccessfulBuild/artifact/PharoWeb.zip"><i class="fa fa-ravelry"></i> PharoWeb Image</a>
+					</li>
+					
+					<li>Download the <strong>Pharo source</strong> file (if needed): 					
+
+					<a class="btn download" href="http://files.pharo.org/sources/PharoV50.sources.zip"><i class="fa fa-file-text-o"></i> Pharo Source</a>
+					</li>
+					
+					<li>Run the <strong>Pharo image</strong> using <strong>Pharo VM</strong>
+                  
+						<p>
+                       <ul>
+                           <li>On Mac OsX: drag and drop the image (<code>PharoWeb.image</code> file) on the virtual machine (<code>Pharo5.0.app</code>) which may be stored in your <code>/Applications</code> folder to be correctled executed depending on your OsX version</li>
+									<li>On Windows: drag and drop the image (<code>PharoWeb.image</code> file) on the virtual machine (<code>Pharo.exe</code>)</li>
+                           
+                           <li>On Linux and other Unixes: pass the image as parameter to the virtual machine (<code>./pharo PharoWeb.image</code>)
+                       </ul>
+                   </p>
+					</li>
+					</ol>
+				</div>
+
+           </section>
 
             <section id="week1">
                 <h2>Week 1: Welcome on Board and Syntax Discovery</h2>
@@ -595,30 +638,6 @@
                 </ol>
             </section>
            
-			  			  
-           <section id="download">
-               <h2>Download Pharo</h2>
-               <p>To get a version of Pharo ready for the MOOC, please follow these steps:</p>
-               <ol>
-                   <li>Download and install the <a href="http://pharo.org/download-50">Pharo Virtual Machine (VM)</a>
-		<br/>Only for <strong>linux users</strong> (tested on Unbutu 16.04):
-                       <pre><code class="bash">sudo dpkg --add-architecture i386
-sudo apt-get update
-sudo apt-get install libx11-6:i386 libgl1-mesa-glx:i386 libfontconfig1:i386 libssl1.0.0:i386
-curl http://get.pharo.org/vm50 | bash
-# you now have a pharo-ui script in the current folder to launch pharo images
-                       </code></pre>
-	    </li>
-                   <li>Download and unzip the <a href="https://ci.inria.fr/pharo-contribution/job/PharoWeb/PHARO=50,VERSION=stable,VM=vm/lastSuccessfulBuild/artifact/PharoWeb.zip">PharoWeb</a> which is a Pharo 5.0 image specifically prepared for the MOOC</li>
-                   <li>Run the PharoWeb image with the Pharo virtual machine:
-                       <ul>
-                           <li>For Windows: drag and drop the image on the virtual machine;</li>
-                           <li>For OS X: drag and drop the image (<code>*.image</code> file) on the virtual machine (<code>Pharo5.0.app</code>);</li>
-                           <li>For Linux and other Unixes: pass the image as parameter to the virtual machine (<code>./pharo-ui PharoWeb.image</code>).
-                       </ul>
-                   </li>
-               </ol>
-           </section>
 							  
 			   <section id="resources">
                 <h2>Resources</h2>
