@@ -122,3 +122,9 @@ li {
 	 color: white;
 	 background-color: #08c;
 }
+
+#pagetitle {
+    color: #3297d4!important;
+    font-size: 4em;
+    margin-top: 5px;
+}
