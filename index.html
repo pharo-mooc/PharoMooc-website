@@ -58,14 +58,38 @@
             <section id="title">
                 <div class="course-image img-responsive center-block">
 
-                    <video
+<!--                    <video
                         controls="controls"
                         poster="pictures/teaser.jpg"
                         width="640" heigh="360"
                         src="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/C048SD-Teaser-OK.mp4">
                         <track label="English" kind="subtitles" srclang="en" src="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/Teaser/C048SD-Teaser-OK.vtt" default>
                     </video>
+-->
+
+		<video id="video" 
+			controls 
+			preload="metadata"
+			poster="pictures/teaser.jpg"
+                        width="640" heigh="360">
+		   <source src="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/C048SD-Teaser-OK.mp4" type="video/mp4">
+		   <track 
+		   	label="English" 
+		   	kind="subtitles" 
+			srclang="en" 
+			src="http://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/Teaser/C048SD-Teaser-OK.vtt" 
+			type="text/vtt" default>
+		</video>
+		
                 </div>
+
+<!-- Did not dare to apply 
+	https://stackoverflow.com/questions/23553350/viewing-html5-video-with-captions-offline 
+		https://gist.github.com/denilsonsa/aeb06c662cf98e29c379
+	https://stackoverflow.com/questions/21052156/how-to-add-subtitles-to-a-video-in-html
+	
+-->
+
 
             </section>
 
