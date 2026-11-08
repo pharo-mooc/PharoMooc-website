@@ -201,3 +201,14 @@ li {
     padding: 4px 20px 10px;
     margin: 20px 0;
 }
+
+.res a.erratum {
+    color: #b9600b;
+    border-color: #f0c99a;
+}
+
+.res a.erratum:hover {
+    background-color: #e07b16;
+    border-color: #e07b16;
+    color: white;
+}
