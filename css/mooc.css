@@ -135,3 +135,69 @@ li {
     font-size: 4em;
     margin-top: 5px;
 }
+/* ---- Top menu bar ---- */
+.navbar-default {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #3297d4;
+}
+
+.enroll-btn {
+    margin-right: 0;
+    background-color: #3297d4;
+    border-color: #2a83b8;
+}
+
+/* keep the bar on one line between the mobile breakpoint and wide screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .navbar-default .navbar-nav > li > a {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+}
+
+/* ---- Per-lecture resource links ---- */
+.res {
+    margin-left: 6px;
+    white-space: nowrap;
+}
+
+.res a {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 0 6px;
+    border: 1px solid #cfe3f2;
+    border-radius: 3px;
+    font-size: 85%;
+    text-decoration: none;
+}
+
+.res a:hover {
+    background-color: #3297d4;
+    border-color: #3297d4;
+    color: white;
+}
+
+/* ---- Install screenshots ---- */
+.install-shot {
+    max-width: 480px;
+    margin: 8px 0 12px;
+    border: 1px solid #ddd;
+}
+
+#enroll {
+    background: #f4f9fd;
+    border-left: 4px solid #3297d4;
+    padding: 4px 20px 10px;
+    margin: 20px 0;
+}
