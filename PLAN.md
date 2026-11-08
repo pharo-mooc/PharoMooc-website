@@ -77,6 +77,12 @@ Content:
 
 ## Out of scope (for now)
 
-- Full visual redesign / replacing Bootstrap 3.
 - Per-video YouTube links.
 - Generating the page from a data file.
+
+## Follow-up (2026-11-08): redesign done
+
+The full redesign, first listed as out of scope, was done afterwards:
+`index.html` is now a JavaScript-free page using one stylesheet,
+`css/modern.css`. Bootstrap, Font Awesome, `css/mooc.css`, `fonts/`
+and `js/` were removed.

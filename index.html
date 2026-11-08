@@ -1,642 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Pharo MOOC: Live Object Programming in Pharo</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pharo MOOC: Live Object Programming in Pharo</title>
+  <meta name="description" content="Free MOOC to learn object-oriented programming with Pharo: 7 weeks of videos in English and French, slides, exercises and challenges. Permanent enrollment on FUN with quizzes and a certificate.">
+  <link rel="stylesheet" href="css/modern.css">
+</head>
+<body>
 
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="pictures/pharo-logo-small.png" alt="">MOOC</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#enroll">Enroll</a>
+      <a href="#testimonies">Testimonies</a>
+      <a href="#profiles">Profiles</a>
+      <a href="#install">Install</a>
+      <a href="#weeks">Lectures</a>
+      <a href="#resources">Resources</a>
+      <a href="#teachers">Teachers</a>
+    </nav>
+    <a class="btn small" href="https://www.fun-mooc.fr/fr/cours/programmation-objet-immersive-en-pharo/">Enroll on FUN</a>
+  </div>
+</header>
 
-        <link href="css/mooc.css" rel="stylesheet">
-		  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-    </head>
-    <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#weeks" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="https://www.pharo.org">
-                        <img alt="Pharo" src="pictures/pharo-logo-small.png">
-                    </a>
-                </div>
+<main id="top">
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="weeks">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#about-course">About</a></li>
-                        <li><a href="#enroll">Enroll</a></li>
-                        <li><a href="#download">Install</a></li>
-                        <li><a href="#week1">W1</a></li>
-                        <li><a href="#week2">W2</a></li>
-                        <li><a href="#week3">W3</a></li>
-                        <li><a href="#week4">W4</a></li>
-                        <li><a href="#week5">W5</a></li>
-                        <li><a href="#week6">W6</a></li>
-                        <li><a href="#week7">W7</a></li>
-                        <li><a href="#resources">Resources</a></li>
-                        <li><a href="#about">Teachers</a></li>
-                    </ul>
-                    <a class="btn btn-primary navbar-btn navbar-right enroll-btn" href="https://www.fun-mooc.fr/fr/cours/programmation-objet-immersive-en-pharo/">Enroll on FUN</a>
-                </div> <!-- navbar-collapse -->
-            </div> <!-- container-fluid -->
-        </nav>
-        <div class="container">
-            <h1 id="pagetitle">The Pharo MOOC</h1>
-            <section id="title">
-                <div class="course-image img-responsive center-block">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Live Object Programming in <span>Pharo</span></h1>
+        <p class="lead">Learn or rediscover object-oriented programming in a pure, live, immersive environment.
+        Videos, slides, exercises, challenges and mini-projects, freely available.</p>
+        <div class="actions">
+          <a class="btn" href="https://www.fun-mooc.fr/fr/cours/programmation-objet-immersive-en-pharo/">Enroll on FUN — free</a>
+          <a class="btn ghost" href="#weeks">Browse the lectures</a>
+        </div>
+        <ul class="facts">
+          <li>7 weeks</li>
+          <li>Dubbed in English &amp; French</li>
+          <li>Subtitles EN · FR · ES · JA</li>
+          <li>Quizzes &amp; certificate</li>
+          <li>Valid for Pharo 14</li>
+        </ul>
+      </div>
+      <video controls preload="metadata" poster="pictures/teaser.jpg" width="640" height="360">
+        <source src="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/C048SD-Teaser-OK.mp4" type="video/mp4">
+        <track label="English" kind="subtitles" srclang="en" src="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/Teaser/C048SD-Teaser-OK.vtt" default>
+      </video>
+    </div>
+  </section>
 
-		<video id="video"
-			controls
-			preload="metadata"
-			poster="pictures/teaser.jpg"
-                        width="640" height="360">
-		   <source src="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/C048SD-Teaser-OK.mp4" type="video/mp4">
-		   <track
-		   	label="English"
-		   	kind="subtitles"
-			srclang="en"
-			src="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/Teaser/C048SD-Teaser-OK.vtt"
-			type="text/vtt" default>
-		</video>
+  <section id="enroll" class="soft">
+    <div class="wrap">
+      <div class="card enroll">
+        <div>
+          <h2>Follow the MOOC on France Université Numérique</h2>
+          <p>Enrollment is <strong>permanent</strong>: register and start at any time, at your own pace.
+          Even if the platform is French, the course is fully available in English and French.</p>
+          <ul>
+            <li><strong>Excellent quizzes</strong> let you check that your understanding of each lecture is correct.</li>
+            <li>Obtain a <strong>certificate</strong> by answering the quizzes.</li>
+            <li>Since 2016, thousands of learners from more than 100 countries have followed this MOOC.</li>
+          </ul>
+          <p>Discuss with other learners on the <code>mooc</code> channel of the Pharo
+          <a href="https://discord.com/invite/QewZMZa">Discord</a>. The videos are also on
+          <a href="https://www.canal-u.tv/producteurs/inria/cours_en_ligne/live_object_programming_in_pharo">CanalU</a>.</p>
+        </div>
+        <a class="btn" href="https://www.fun-mooc.fr/fr/cours/programmation-objet-immersive-en-pharo/">Enroll on FUN</a>
+      </div>
+    </div>
+  </section>
 
-                </div>
-
-<!-- Did not dare to apply
-	https://stackoverflow.com/questions/23553350/viewing-html5-video-with-captions-offline
-		https://gist.github.com/denilsonsa/aeb06c662cf98e29c379
-	https://stackoverflow.com/questions/21052156/how-to-add-subtitles-to-a-video-in-html
-
--->
-
-
-            </section>
-
-            <section>
-<p>Welcome to the Pharo MOOC: a set of videos, exercises, challenges and mini-projects.
-The Pharo MOOC is fully dubbed in French and English, with subtitles in Japanese, English, French and Spanish.
-This web site gives free access to all the material of the MOOC.</p>
-	</section>
-
-	<section>
-	          <h2>Presequel: Basics on OOP</h2>
-		This MOOC includes some presequel videos and slides about Object-oriented Programming (OOP) for newbies <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/2018-PreSequelOOP-FR">French version</a> and <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/2018-PreSequelOOP-ENG">English version</a>.
-</section>
-
-<section id="enroll">
-<h2>Follow the MOOC on France Université Numérique</h2>
-<p>The MOOC is available on <a href="https://www.fun-mooc.fr/fr/cours/programmation-objet-immersive-en-pharo/">France Université Numérique (FUN)</a> with
-<strong>permanent enrollment</strong>: you can register and start at any time, at your own pace.
-Even if the platform is French, the course is fully available in English and French.</p>
+  <section id="about-course">
+    <div class="wrap">
+      <h2>About this course</h2>
+      <p class="lead">Whether you are a beginner or an expert in object-oriented programming, this MOOC will change the way
+      you program with objects. Pharo is a pure object-oriented language in the tradition of Smalltalk: elegant,
+      fun to use and very powerful. You are immersed in a world of live objects, with immediate feedback at every
+      moment of your development.</p>
+      <p>New to objects? Start with the <strong>presequel</strong> on the basics of OOP, in
+      <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/2018-PreSequelOOP-ENG">English</a> or <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/2018-PreSequelOOP-FR">French</a>.</p>
+      <details class="more">
+        <summary>More about the course</summary>
+<p>Pharo is also a very powerful open-source environment used by companies to develop web applications.</p>
+<p>In this MOOC, we will present more specifically Pharo’s Web stack which changes the way you build web applications.</p>
+<p>In addition we will present fundamental programming concepts and how Pharo uses them. We will present some coding idioms and Design Patterns to better design object-oriented applications. Such concepts can be applied to any object-oriented programming language.</p>
+<p>This MOOC is intended for people with a programming experience but everyone motivated could follow the course thanks to the numerous resources proposed. This MOOC will also have an interest for computer programming teachers: Pharo is a good teaching tool for object-oriented programming and the course will discuss object-oriented design principles (e.g. polymorphism, message sending, self/super, design patterns).</p>
+<p>Throughout this MOOC you will :</p>
 <ul>
-<li><strong>Excellent quizzes</strong> let you check that your understanding of each lecture is correct.</li>
-<li>You can obtain a <strong>certificate</strong> by answering the quizzes.</li>
-<li>Since 2016, thousands of learners from more than 100 countries have followed this MOOC.</li>
+<li>learn how to program in Pharo,</li>
+<li>be immersed in a live environment and live a new programming experience,</li>
+<li>develop a web application to apply the different aspects of Pharo presented in the course.</li>
 </ul>
-<p><a class="btn btn-primary" href="https://www.fun-mooc.fr/fr/cours/programmation-objet-immersive-en-pharo/">Enroll on FUN</a></p>
-<p>Discuss with other learners on the <code>mooc</code> channel of the Pharo <a href="https://discord.com/invite/QewZMZa">Discord</a>.
-The videos are also available on <a href="https://www.canal-u.tv/producteurs/inria/cours_en_ligne/live_object_programming_in_pharo">CanalU</a>.</p>
-<p>We would like to thank our sponsors: Unit, Unisciel, and the LearningLab of Inria.</p>
-</section>
+<p>This MOOC will also provide a new vision of the fundamental principles of object-oriented programming, i.e. polymorphism and late binding.</p>
+<p>This course lasts 7 weeks.</p>
+<p>Each week is composed of several sequences containing a video lecture, quizzes and other videos proposing application exercises and programming demonstrations.</p>
+<p>This course is proposed in french and in english. Videos are in french with french and english subtitles. Pdf course documents (in english only) will be available. All other materials (quizzes, explanation texts…) will be offered in both languages.</p>
+      </details>
+    </div>
+  </section>
 
-<section>
-<h2>Testimonies</h2>
-This Mooc is demanding but rewarding - check below what the participants are saying :)
-Thank you for these messages, they boost us!
+  <section id="testimonies" class="soft">
+    <div class="wrap">
+      <h2>What learners say</h2>
+      <p class="lead">This MOOC is demanding but rewarding. Thank you for these messages, they boost us!</p>
+      <div class="quotes">
+        <blockquote>The week 3 Pharo MOOC videos are excellent, thanks for the recommendation. The idea that <em>sending a message is making a choice</em> is interesting and I'm now starting from week 1 and I hope to keep learning.</blockquote>
+        <blockquote>J'ai trouvé ça très intéressant, beaucoup plus que prévu ! je regrette de ne pas m'y être mis plus tôt. <em>J'ai enfin l'impression de vraiment faire de la POO !</em> Ou à l'inverse je me rend que je n'en faisais pas vraiment...<cite>— Anonymous, 2019</cite></blockquote>
+        <blockquote>I have just completed week seven of the Pharo Mooc (beginner and object oriented tracks) I am starting a redo of the Mooc with the web track (TinyBlog project). I have already learned so much ! I have spent the last 20 years or so in software development and, following this Mooc, <em>I realized I hadn’t really grasped the essence of object oriented design</em>.<cite>— Anonymous</cite></blockquote>
+        <blockquote><em>Really one of the best mooc I have ever attended</em>. And I have attended quite a few (openSAP, openHPI). As an old fashioned ABAP developer <em>I want to be reborn as Pharo developer in my next life</em> :-)<cite>— Anonymous</cite></blockquote>
+        <blockquote>Hi! I finished the MOOC some weeks ago and I would like to congratulate everybody involved! After a decade+ of Python programming <em>I think I found my new favorite language</em> :). I'm making a small Teapot server for Slack command bots, I'm goona push it to Github (yay Iceberg), if anyone is interested.<cite>— EduardoPadoan</cite></blockquote>
+        <blockquote>I just completed the @pharoproject Mooc <em>the best investment I have ever made of my time</em>.<cite>— MAQBOOL</cite></blockquote>
+      </div>
+      <details class="more">
+        <summary>More testimonies</summary>
+        <div class="quotes">
+        <blockquote>Hey all - I've just finished the Mooc - thanks for an excellent course and a thouroughly interesting look at <em>a new way to program</em> :smile: Looking forward to starting to play with Pharo on some upcoming ideas I've had.<cite>— Tieryn</cite></blockquote>
+        <blockquote>As much as I thought I understand object-orientation, it is very clear NOW that without a truly useable Smalltalk, which Pharo is, <em>it is impossible to really understand and exercise object-orientation</em>. Thank you all soooo much.<cite>— Mike D. 06/12/2020</cite></blockquote>
+        <blockquote>I finished the Pharo MOOC a few days ago. Thank you very much to Damien, Stephane, and Luc for their work on the material! <em>I enjoyed it very much</em><cite>— Anonymous</cite></blockquote>
+        <blockquote>I already had previous Smalltalk experience, but yes, I'm extremely happy <em>Chapter 7 has been extremely fulfilling</em><cite>— Anonymous</cite></blockquote>
+        <blockquote>A general comment I wanted to make is that the MOOC so far has been great. <em>Impressed with the quality and content</em>, and grateful that it is available and free. Many thanks!<cite>— Aryeh</cite></blockquote>
+        <blockquote>IMHO the videos were very well done. I would even say <em>shockingly well done</em>… for a bunch of programmers who are supposed to be clueless about design<cite>— SeanDeNigris, 10/26/2017</cite></blockquote>
+        <blockquote>The more I learning about @pharoproject the more I appreciate it's beauty and simplicity, <em>finally, object-oriented programming is done right</em><cite>— MAQBOOL</cite></blockquote>
+        <blockquote>Mooc absolument remarquable. Superbe voyage autour de Pharo. <em>Le paradigme objet qui (re)prend enfin du sens !</em><cite>— Anonymous, 01/03/2019</cite></blockquote>
+        </div>
+      </details>
+    </div>
+  </section>
 
-<br/>
+  <section id="profiles">
+    <div class="wrap">
+      <h2>Choose your path</h2>
+      <p class="lead">Five profiles to follow the MOOC at different speeds and levels. Lectures are tagged with these icons.
+      The profiles are not exclusive: to become an expert, start as a newbie and grow.</p>
+      <div class="grid">
+        <div class="card"><div class="emoji">🐥</div><h3>Total newbies</h3><p>Focus on the beginning of the lectures; you can skip Seaside/Mongo and TinyBlog. Take it easy, and spend time on the navigation tools (senders and implementors).</p></div>
+        <div class="card"><div class="emoji">🌐</div><h3>Looking for Web</h3><p>Start with the syntax, then the Seaside/Mongo combo. For exercises, focus on TinyChat and TinyBlog.</p></div>
+        <div class="card"><div class="emoji">🎁</div><h3>Refresh your OO perspective</h3><p>Even Booleans and collections are plain objects: you send a message to a collection to loop, and to a Boolean to branch.</p></div>
+        <div class="card"><div class="emoji">🌶</div><h3>Wanna be a Pharo expert</h3><p>Have a look at everything. Drop the Web and Black Magic parts if you are in a hurry.</p></div>
+        <div class="card"><div class="emoji">🔮</div><h3>Looking for Black Magic</h3><p>Reflection, metaclasses, meta-programming: what makes Pharo a unique OO language. Requires almost everything except the Web part.</p></div>
+      </div>
+    </div>
+  </section>
 
-<div class="well testimony">The week 3 Pharo MOOC videos are excellent, thanks for the recommendation. The idea that sending a message is making a choice is interesting and  I'm now starting from week 1 and I hope to keep learning.</div>
+  <section id="install" class="soft">
+    <div class="wrap">
+      <h2>Install Pharo</h2>
+      <p class="note">The MOOC was recorded with Pharo 8, but <strong>its content is still fully valid in Pharo 14</strong>:
+      the language, the object model and the design lessons have not changed. The user interface in the videos is
+      older, so some menus and tools look slightly different.</p>
+      <ol class="steps">
+        <li>Download and install the <a href="https://pharo.org/download">Pharo Launcher</a> for your OS.</li>
+        <li>Run Pharo Launcher and select <strong>create image</strong> in the contextual menu of <strong>Pharo Mooc</strong>.
+          <img src="pictures/createPharoMOOCImage.png" alt="Creating the Pharo MOOC image in Pharo Launcher" loading="lazy"></li>
+        <li>Select your new Pharo Mooc image in the right pane and click the green play button in the upper-right toolbar.
+          <img src="pictures/LaunchPharoMOOCImage.png" alt="Launching the Pharo MOOC image in Pharo Launcher" loading="lazy"></li>
+      </ol>
+    </div>
+  </section>
 
-<div class="well testimony">J'ai trouvé ça très intéressant, beaucoup plus que prévu ! je regrette de ne pas m'y être mis plus tôt. J'ai enfin l'impression de vraiment faire de la POO ! Ou à l'inverse je me rend que je n'en faisais pas vraiment... - Anonymous, 2019</div>
+  <section id="weeks">
+    <div class="wrap">
+      <h2>Lectures, week by week</h2>
+      <p class="lead">Every lecture comes with its slides and its video in English and French.
+      Prefer streaming? Watch the playlists on YouTube:</p>
+      <p class="yt-links">
+        <a class="yt" href="https://www.youtube.com/watch?v=JUKIjdjGjBU&amp;list=PL2okA_2qDJ-kCHVcNXdO5wsUZJCY31zwf">English playlist</a>
+        <a class="yt" href="https://www.youtube.com/watch?v=-Sk_35lB-EI&amp;list=PL2okA_2qDJ-k83Kxu_d8EPzMXtvCrReRn">French playlist</a>
+      </p>
+      <nav class="week-nav" aria-label="Weeks">
+        <a href="#week1">W1 · Welcome on Board and Syntax Discovery</a>
+        <a href="#week2">W2 · Pharo Syntax, Blocks and Inspector</a>
+        <a href="#week3">W3 · Design, Class Methods and Collections</a>
+        <a href="#week4">W4 · Inheritance & Lookup and Web Development</a>
+        <a href="#week5">W5 · Exception, Debugging and Reflection</a>
+        <a href="#week6">W6 · Rethink Lookup and Advanced Object-Oriented Design</a>
+        <a href="#week7">W7 · More on Object-Oriented Design and Testing</a>
+      </nav>
+      <p class="legend">
+        <span class="kind k-lecture">Lecture</span><span class="kind k-live">Live</span><span class="kind k-redo">Redo</span><span class="kind k-exercise">Exercise</span><span class="kind k-challenge">Challenge</span>
+        <span>🐥 Newbies · 🌐 Web · 🎁 OO · 🌶 Expert · 🔮 Magic</span>
+      </p>
+      <article class="week" id="week1">
+        <h3><small>Week 1</small>Welcome on Board and Syntax Discovery</h3>
+        <p class="week-res">
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/">All slides &amp; exercises</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/">All EN videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/">All FR videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/W1/">Subtitles</a>
+        </p>
+        <ul class="items">
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Objectives of this MOOC</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S01-ObjectivesMooc.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S1-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S1-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Pharo: an Immersive Object-Oriented System</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S02-WhatIsPharo.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S2-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S2-v2.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Pharo Vision</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S03-PharoVision.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S3-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S3-v2.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Pharo Object Model in a Nutshell</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S04-PharoModelInaNushell.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S4-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S4-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Pharo Syntax in a Nutshell</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S05-PharoSyntaxInANutshell.pdf">Slides</a> <a class="err" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S05-PharoSyntaxInANutshell.pillar.erratum">Erratum</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S5-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S5-v2.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Class and Method Definitions</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S06-ClassAndMethodDefinition.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S6--EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S6-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live A: Selecting Expressions</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-LiveA-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-LiveA-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live B: Prof Stef</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-LiveB-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-LiveB-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live C: Syntax Highlighting gives Feedback</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-LiveC-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-LiveC-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live D: Learn Keyboard Shortcuts</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-LiveD-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-LiveD-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-redo">Redo</span><span class="title"><span class="tags" title="Newbies">🐥</span>Redo 1: Packages, classes and methods</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo1-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo1-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-redo">Redo</span><span class="title"><span class="tags" title="Newbies">🐥</span>Redo 2: Adding some unit tests</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo2-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo2-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-redo">Redo</span><span class="title"><span class="tags" title="Newbies">🐥</span>Redo 3: Looking back at method creation</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo3-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo3-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-redo">Redo</span><span class="title"><span class="tags" title="Newbies">🐥</span>Redo 4: Save your code with Iceberg</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo4-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo4-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-redo">Redo</span><span class="title"><span class="tags" title="Newbies">🐥</span>Redo 5: Object initialization</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo5-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo5-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-redo">Redo</span><span class="title"><span class="tags" title="Newbies">🐥</span>Redo 6: Better printing with printOn:</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo6-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo6-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-redo">Redo</span><span class="title"><span class="tags" title="Newbies">🐥</span>Redo 7: Looking a commit history and changes with Iceberg</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo7-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo7-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Newbies">🐥</span>Expressions and Messages</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/Exo-Expressions-LiteralObjects.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/Exo-Expressions-LiteralObjects-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Newbies">🐥</span>TinyBlog: Presentation and Model</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/TinyBlog-EN_Chapter1and2.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/TinyBlog-FR_Chapter1and2.pdf">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Newbies">🐥</span>Developing a Simple Counter (companion of Redo 1–7)</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/Exo-Counter.pdf">EN</a></span></li>
+          <li><span class="kind k-challenge">Challenge</span><span class="title"><span class="tags" title="Expert">🌶</span>Challenge 0</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/Challenge0-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/Challenge0-FR.pdf">FR</a></span></li>
+        </ul>
+      </article>
+      <article class="week" id="week2">
+        <h3><small>Week 2</small>Pharo Syntax, Blocks and Inspector</h3>
+        <p class="week-res">
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/">All slides &amp; exercises</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/">All EN videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/">All FR videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/W2/">Subtitles</a>
+        </p>
+        <ul class="items">
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Understanding Messages</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S01-Messages.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S1-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S1-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Messages for Java programmer</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S02-Messages-ForTheJavaProgrammers.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S2-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S2-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Messages: Composition and Precedence</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S03-Messages-Precedence.pdf">Slides</a> <a class="err" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S03-Messages-Precedence.pillar.erratum">Erratum</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S3-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S3-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Understanding Messages: Sequence and Cascade</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S04-Messages-Sequence.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S4-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S4-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Introduction to Blocks</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S06-Blocks.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S6-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S6-v2.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Loops</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S07-Loops.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S7-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S7-v2.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Booleans and Conditions</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S08-BooleansAndCondition.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S8-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S8-v2.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Parenthesis vs Square Brackets</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S09-ParenthesisVsSquareBrackets.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S9-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S9-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Yourself</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S10-Yourself.pdf">Slides</a> <a class="err" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S10-Yourself.pillar.erratum">Erratum</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S10-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S10-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="OO">🎁</span>The Essence of Dispatch through an Exercise</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S11-Design-EssenceOfDispatchExo.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S11-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S11-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live A: Finding methods with the Finder</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/W2-LiveA-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/W2-LiveA-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live B: Look closer at objects with the Inspector</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/W2-LiveB-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/W2-LiveB-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live C: Browsing a class</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/W2-LiveC-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/W2-LiveC-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live D: Working with scoped operations</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/W2-LiveD-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/W2-LiveD-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-redo">Redo</span><span class="title"><span class="tags" title="Newbies">🐥</span>Redo 1:Xtreme TDD</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/W2-Redo-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/W2-Redo-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Newbies">🐥</span>Solution: Expressions and Messages</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Exo-Expressions-LiteralObjects-Solution.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Exo-Expressions-LiteralObjects-Solution-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Newbies">🐥</span>Expression Results</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Exo-ObjectsExpressions.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Exo-ObjectsExpressions-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Newbies">🐥</span>TinyBlog: Extending and Testing the Model</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/TinyBlog-EN_Chapter3.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/TinyBlog-FR_Chapter3.pdf">FR</a></span></li>
+          <li><span class="kind k-challenge">Challenge</span><span class="title"><span class="tags" title="Expert">🌶</span>Solution: Challenge 0</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Challenge0-Solution-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Challenge0-Solution-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-challenge">Challenge</span><span class="title"><span class="tags" title="Expert">🌶</span>Challenge 1</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Challenge1-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Challenge1-FR.pdf">FR</a></span></li>
+        </ul>
+      </article>
+      <article class="week" id="week3">
+        <h3><small>Week 3</small>Design, Class Methods and Collections</h3>
+        <p class="week-res">
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/">All slides &amp; exercises</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/">All EN videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/">All FR videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/W3/">Subtitles</a>
+        </p>
+        <ul class="items">
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Essence of Dispatch: Taking Pharo Booleans as Example</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S01-Design-EssenceOfDispatchNot.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S1-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S1-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Essence of Dispatch</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S02-Design-EssenceOfDispatch.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S2-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S2-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Variables</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S03-Basic-Variables.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S3-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S3-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies, Web">🐥🌐</span>A Simple HTTP Application: a Pretext to Revisit Pharo Syntax</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S04-TeapotAsAPretext.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S4-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S4-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Class Methods</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S06-BasicClassMethods.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S6-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S6-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>An Overview of Essential Collections</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S07-Basic-ArraySetOrderedCollection.pdf">Slides</a> <a class="err" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S07-Basic-ArraySetOrderedCollection.pillar.erratum">Erratum</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S7-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S7-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="OO">🎁</span>Iterators</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S09-Iterators.pdf">Slides</a> <a class="err" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S09-Iterators.pillar.erratum">Erratum</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S9-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S9-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Stream Overview</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S10-Streams.pdf">Slides</a> <a class="err" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S10-Streams.pillar.erratum">Erratum</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S10-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S10-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Understanding Return</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S11-UnderstandingReturn.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S11-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S11-v1.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live A: Understanding Implementor/Senders</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/W3-LiveA-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/W3-LiveA-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live B: Understanding class references</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/W3-LiveB-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/W3-LiveB-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live C: Find information using Spotter</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/W3-LiveC-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/W3-LiveC-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-redo">Redo</span><span class="title"><span class="tags" title="Newbies">🐥</span>Redo 1: Implementing Die mechanics</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/W3-Redo1-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/W3-Redo1-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-redo">Redo</span><span class="title"><span class="tags" title="Newbies">🐥</span>Redo 2: Implementing a Die handle</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/W3-Redo2-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/W3-Redo2-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-redo">Redo</span><span class="title"><span class="tags" title="Newbies">🐥</span>Redo 3: Finalizing the DSL</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/W3-Redo3-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/W3-Redo3-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Newbies">🐥</span>Solution: Expression Results</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Exo-ObjectsExpressions-Solution.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Exo-ObjectsExpressions-Solution-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Newbies">🐥</span>Rewriting Expressions</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Exo-Expressions-Rewriting.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Exo-Expressions-Rewriting-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Newbies">🐥</span>Crafting a Simple Embedded DSL for Dice (companion of Redo 1–3)</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Exo-DSL-V2.pdf">EN</a></span></li>
+          <li><span class="kind k-challenge">Challenge</span><span class="title"><span class="tags" title="Expert">🌶</span>Solution: Challenge 1</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Challenge1-Solution-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Challenge1-Solution-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-challenge">Challenge</span><span class="title"><span class="tags" title="Expert">🌶</span>Challenge 2</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Challenge2-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Challenge2-FR.pdf">FR</a></span></li>
+        </ul>
+      </article>
+      <article class="week" id="week4">
+        <h3><small>Week 4</small>Inheritance & Lookup and Web Development</h3>
+        <p class="week-res">
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/">All slides &amp; exercises</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/">All EN videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/">All FR videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/W4/">Subtitles</a>
+        </p>
+        <ul class="items">
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Inheritance Basics</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S01-InheritanceAndLookup-1-Inheritance.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S1-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S1-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Inheritance & Lookup: Lookup</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S02-InheritanceAndLookup-2-Lookup.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S2-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S2-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Inheritance & Lookup: Super</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S03-InheritanceAndLookup-3-Super.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S3-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S3-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Inheritance & Lookup: DoesNotUnderstand:</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S04-InheritanceAndLookup-4-DoesNotUnderstand.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S4-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S4-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Expert">🌶</span>Inheritance & Lookup: Lookup in Metaclasses</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S05-InheritanceAndLookup-5-LookupMetaclasses.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S5-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S5-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="OO">🎁</span>Class Methods at Work</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S06-ClassMethodsAtWork.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S6-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S6-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Web">🌐</span>Overview of Pharo Web Stack</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S07-PharoWebStack.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S7-VoiceOverEN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S7-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Web">🌐</span>Seaside: an Innovative Web Application Framework</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S08-Seaside.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S8-VoiceOverEN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S8-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Web">🌐</span>Seaside: Rendering Components</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S09-SeasideDSL.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S9-VoiceOverEN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S9-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Web">🌐</span>Seaside: a Glance at MetaData and REST</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S10-Seaside-MagritteREST.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S10-VoiceOverEN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S10-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Web">🌐</span>Voyage: NoSql Object Database</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S11-Voyage.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S11-VoiceOverEN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S11-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live A: Git: New project creation</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/W4-LiveA-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/W4-LiveA-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live B: Git: Creating a remote repository to an existing project</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/W4-LiveB-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/W4-LiveB-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live C: Loading a project with Metacello</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/W4-LiveC-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/W4-LiveC-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="OO">🎁</span>Live D: Applying Refactorings</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/W4-LiveD-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/W4-LiveD-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="OO">🎁</span>Live E: Quality checker in action</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/W4-LiveE-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/W4-LiveE-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Newbies">🐥</span>Solution: Rewriting Expressions</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Exo-Expressions-Rewriting-Solution.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Exo-Expressions-Rewriting-Solution-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Web">🌐</span>TinyBlog: Data Persitency using Voyage and Mongo</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/TinyBlog-EN_Chapter4to7.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/TinyBlog-FR_Chapter4to7.pdf">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Web">🌐</span>TinyBlog: Building a Web Interface with Seaside</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/TinyBlog-EN_Chapter4to7.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/TinyBlog-FR_Chapter4to7.pdf">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Web">🌐</span>Building a Simple Contact Book Application</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Exo-ContactManager.pdf">EN</a></span></li>
+          <li><span class="kind k-challenge">Challenge</span><span class="title"><span class="tags" title="Expert">🌶</span>Solution: Challenge 2</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Challenge2-Solution-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Challenge2-Solution-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-challenge">Challenge</span><span class="title"><span class="tags" title="Expert">🌶</span>Challenge 3</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Challenge3-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Challenge3-FR.pdf">FR</a></span></li>
+        </ul>
+      </article>
+      <article class="week" id="week5">
+        <h3><small>Week 5</small>Exception, Debugging and Reflection</h3>
+        <p class="week-res">
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/">All slides &amp; exercises</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/">All EN videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/">All FR videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/W5/">Subtitles</a>
+        </p>
+        <ul class="items">
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Web">🌐</span>Seaside: Composing Components</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S01-Seaside-ComposingComponents.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S1-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S1-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="OO">🎁</span>Really Understanding Class Methods</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S02-UnderstandingClassMethods.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S2-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S2-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Common Errors</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S03-LearningFromMistake.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S3-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S3-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Expert">🌶</span>Powerful Exceptions: an Overview</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S04-Exceptions.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S4-EN-V2.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S4-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Debugging in Pharo</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S05-Debugging.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S5-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S5-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>SUnit: Unit Tests in Pharo</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S06-SUnit.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S6-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S6-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Expert">🌶</span>Files in Pharo</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S07-Files.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S7-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S7-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Magic">🔮</span>Reflection: Basic Introspection</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S08-Introspection.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S8-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S8-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Expert">🌶</span>Benchmarking in Pharo</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S09-Benchmarking.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S9-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S9-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live A: Advanced Spotter actions</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/W5-LiveA-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/W5-LiveA-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live B: First look at the Debugger actions</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/W5-LiveB-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/W5-LiveB-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Newbies">🐥</span>Live C: Find a bug with the debugger</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/W5-LiveC-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/W5-LiveC-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Web">🌐</span>TinyBlog: Building an Admin Seaside Web Interface with Magritte</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/TinyBlog-EN_Chapter8and9.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/TinyBlog-FR_Chapter8and9.pdf">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Newbies">🐥</span>TinyChat</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/Exo-TinyChat-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/Exo-TinyChat-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-challenge">Challenge</span><span class="title"><span class="tags" title="Expert">🌶</span>Solution: Challenge 3</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/Challenge3-Solution-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/Challenge3-Solution-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-challenge">Challenge</span><span class="title"><span class="tags" title="Expert">🌶</span>Challenge 4</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/Challenge4-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/Challenge4-FR.pdf">FR</a></span></li>
+        </ul>
+      </article>
+      <article class="week" id="week6">
+        <h3><small>Week 6</small>Rethink Lookup and Advanced Object-Oriented Design</h3>
+        <p class="week-res">
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/">All slides &amp; exercises</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/">All EN videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/">All FR videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/W6/">Subtitles</a>
+        </p>
+        <ul class="items">
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="OO">🎁</span>Did You Really Understand Super?</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S01-DidYouUnderstandSuper.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S1-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S1-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Understanding the Implementation of ifTrue:ifFalse:</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S02-Design-ImplementingIfTrue.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S2-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S2-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="OO">🎁</span>Dice new vs. self class new</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S03-SelfSendsDiceHandle.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S3-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S3-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="OO">🎁</span>Message sends are plans for reuse</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S04-SelfSendsArePlanForReuse.pdf">Slides</a> <a class="err" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S04-SelfSendsArePlanForReuse.pillar.erratum">Erratum</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S4-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S4-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="OO">🎁</span>Hooks and Templates</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S05-HookAndTemplate.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S5-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S5-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Runtime Architecture</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S06-RuntimeArchitecture.pdf">Slides</a> <a class="err" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S06-RuntimeArchitecture.pillar.erratum">Erratum</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S6-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S6-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Characters, Strings and Symbols</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S07-CharacterStringSymbol.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S7-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S7-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Dynamic Vs. Literal Arrays</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S08-DynamicVersusLiteralArray.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S8-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S8-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="OO">🎁</span>Live A: Customized tabs in the Inspector</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/W6-LiveA-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/W6-LiveA-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-live">Live</span><span class="title"><span class="tags" title="Expert">🌶</span>Live B: Personalize your image startup</span><span class="links"><a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/W6-LiveB-EN-final.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/W6-LiveB-FR-final.mp4">FR</a></span></li>
+          <li><span class="kind k-exercise">Exercise</span><span class="title"><span class="tags" title="Web">🌐</span>TinyBlog: Deployment</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/TinyBlog/TinyBlog-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/TinyBlog/TinyBlog-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-challenge">Challenge</span><span class="title"><span class="tags" title="Expert">🌶</span>Solution: Challenge 4</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/Challenge4-Solution-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/Challenge4-Solution-FR.pdf">FR</a></span></li>
+          <li><span class="kind k-challenge">Challenge</span><span class="title"><span class="tags" title="Expert">🌶</span>Challenge 5</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/Challenge5-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/Challenge5-FR.pdf">FR</a></span></li>
+        </ul>
+      </article>
+      <article class="week" id="week7">
+        <h3><small>Week 7</small>More on Object-Oriented Design and Testing</h3>
+        <p class="week-res">
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/">All slides &amp; exercises</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/">All EN videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/">All FR videos</a>
+          <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/W7/">Subtitles</a>
+        </p>
+        <ul class="items">
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Expert">🌶</span>Advanced Points on Classes</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S01-AdvancedPointOnClasses.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S1-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S1-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>Variable Size Objects</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S02-VariableClasses.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S2-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S2-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Magic">🔮</span>Understanding Metaclasses</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S03-UnderstandingMetaclasses.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S3-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S3-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Magic">🔮</span>Reflective Operations for Live Programming</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S04-OtherReflective.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S4-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S4-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Magic">🔮</span>DoesNotUnderstand: a Precious Hook</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S05-DoesNotUnderstand.pdf">Slides</a> <a class="err" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S05-DoesNotUnderstand.pillar.erratum">Erratum</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S5-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S5-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Magic">🔮</span>Reflection: Stack as an Object</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S06-thisContext.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S6-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S6-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="OO">🎁</span>Avoid Null Checks</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S07-AvoidIsNill.pdf">Slides</a> <a class="err" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S07-AvoidIsNill.pillar.erratum">Erratum</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S7-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S7-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-lecture">Lecture</span><span class="title"><span class="tags" title="Newbies">🐥</span>A Journey in Pharo: A Bright Future</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S08-Conclusion.pdf">Slides</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S8-EN-V1.mp4">EN</a> <a class="vid" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S8-v3.mp4">FR</a></span></li>
+          <li><span class="kind k-challenge">Challenge</span><span class="title"><span class="tags" title="Expert">🌶</span>Solution: Challenge 5</span><span class="links"><a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/Challenge5-Solution-EN.pdf">EN</a> <a class="pdf" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/Challenge5-Solution-FR.pdf">FR</a></span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
 
-<div class="well testimony">I have just completed week seven of the Pharo Mooc (beginner and object oriented  tracks) I am starting a redo of the Mooc with the web track (TinyBlog project).  I have already learned so much ! I have spent the last 20 years or so in software development and, following this Mooc, I realized I hadn’t really grasped the essence of object oriented design. - Anonymous </div>
+  <section id="resources" class="soft">
+    <div class="wrap">
+      <h2>Resources</h2>
+      <p>Free online resources are on the <a href="https://www.pharo.org/documentation">Pharo documentation</a> page.
+      We recommend the updated <em>Pharo by Example</em>, the Pharo cheat sheet, and <em>Learning Object-Oriented
+      Programming, Design and TDD with Pharo</em> on <a href="https://books.pharo.org/">books.pharo.org</a>.</p>
+    </div>
+  </section>
 
-<div class="well testimony">« Really one of the best mooc I have ever attended. And I have attended quite a few (openSAP, openHPI). As an old fashioned ABAP developer I want to be reborn as Pharo developer in my next life :-) » - Anonymous</div>
+  <section id="teachers">
+    <div class="wrap">
+      <h2>The teachers</h2>
+      <div class="grid">
+        <div class="card teacher"><img src="pictures/dcassou.jpg" alt="Damien Cassou"><h3>Damien Cassou</h3><p>Damien Cassou received his PhD degree in Computer Science from the University of Bordeaux, France. He is working as associate professor (maître de conférences) at the University of Lille, France, and is a member of the RMoD research group (Inria, CRIStAL). Damien is working on dynamic programming languages (most notably around traits and modules) and software engineering (mainly tools for developers). Damien has co-organized many events (including ECOOP’14 and ESUG many times) and co-wrote several books. Because he loves programming, Damien is also an active member of the Smalltalk and Emacs-Lisp communities. Finally, he maintains many packages for NixOS.</p></div>
+        <div class="card teacher"><img src="pictures/sducasse.jpg" alt="Stéphane Ducasse"><h3>Stéphane Ducasse</h3><p>Stéphane Ducasse is directeur de recherche at Inria. He leads the RMoD team. He is expert in two domains: object-oriented language design and reengineering. His works on traits have been introduced in AmbientTalk, Slate, Pharo, Perl-6, PHP 5.4 and Squeak. They have also influenced JavaScript, Scala and Fortress. Stéphane is also expert on software quality, program understanding, program visualisations, reengineering and metamodeling. He is one of the developers of Pharo. He is also one of the developers of Moose, an open-source software analysis platform. He created Synectique a company building dedicated tools for advanced software analysis. Stéphane wrote several books on programming learning and other topics such as web programming.</p></div>
+        <div class="card teacher"><img src="pictures/lfabresse.jpg" alt="Luc Fabresse"><h3>Luc Fabresse</h3><p>Luc Fabresse received his PhD in computer science in 2007 from the University of Montpellier 2, France. He is currently an associate professor in the CAR research theme at Mines Douai, Mines-Telecom Institute. Luc is the co-author of several research papers advocating the use of dynamic and reflective languages such as Pharo to support live programming of mobile and autonomous robots in an efficient way. Luc's long-term vision is to be able to use Jedi mind trick on mobile robots ;-) Meanwhile, he concretizes all his ideas (models and tools) in the PhaROS platform (a Pharo client for the Robotics Operating System) to develop, debug, test, deploy, execute and benchmark robotics applications. Each year, Luc gives many computer science lectures and co-organizes events (technical days, conferences, ...). He also promotes Smalltalk (ESUG board member) and participates to its open-source implementation Pharo.</p></div>
+      </div>
+    </div>
+  </section>
 
-<div class="well testimony"> Hi! I finished the MOOC some weeks ago and I would like to congratulate everybody involved! After a decade+ of Python programming I think I found my new favorite language :). I'm making a small Teapot server for Slack command bots, I'm goona push it to Github (yay Iceberg), if anyone is interested. - EduardoPadoan</div>
+  <section id="partners" class="soft">
+    <div class="wrap">
+      <h2>The partners</h2>
+      <p>We thank our sponsors Unit, Unisciel, and the LearningLab of Inria.</p>
+      <div class="partners">
+        <a href="https://www.inria.fr/"><img src="pictures/logo_inria_fr-ptt.jpeg" alt="logo inria recherche"></a>
+        <a href="https://www.univ-lille.fr/"><img src="pictures/universite-lille.png" alt="logo Université de Lille"></a>
+        <a href="https://imt-nord-europe.fr/"><img src="pictures/IMT_Lille_Douai_Logo.png" alt="logo IMT Nord Europe (formerly IMT Lille Douai)"></a>
+        <a href="https://www.agence-nationale-recherche.fr/investissements-d-avenir/appels-a-projets/"><img src="pictures/InvestAvenir.jpg" alt="logo investissement d'avenir"></a>
+        <a href="https://utop.fr/"><img src="pictures/logo_uTOP.jpg" alt="logo utop"></a>
+        <a href="https://www.unit.eu/"><img src="pictures/unit.png" alt="logo unit"></a>
+        <a href="https://www.unisciel.fr/"><img src="pictures/logo_Unisciel.png" alt="logo unisciel"></a>
+        <a href="https://www.canal-u.tv/producteurs/inria/cours_en_ligne/live_object_programming_in_pharo"><img src="pictures/canalU.png" alt="logo CanalU"></a>
+      </div>
+    </div>
+  </section>
 
-<div class="well testimony">I just completed the @pharoproject Mooc the best investment I have ever made of my time. MAQBOOL </div>
+</main>
 
-<div class="well testimony">Hey all - I've just finished the Mooc - thanks for an excellent course and a thouroughly interesting look at a new way to program :smile: Looking forward to starting to play with Pharo on some upcoming ideas I've had. - Tieryn</div>
+<footer>
+  <div class="wrap">This web page is hosted on <a href="https://github.com/pharo-mooc/PharoMooc-website">GitHub</a>.</div>
+</footer>
 
-<div class="well testimony">As much as I thought I understand object-orientation, it is very clear NOW that without a truly useable Smalltalk, which Pharo is, it is impossible to really understand and exercise object-orientation. Thank you all soooo much. - Mike D. 06/12/2020
-</div>
-
-<div class="well testimony">I finished the Pharo MOOC a few days ago. Thank you very much to Damien, Stephane, and Luc for their work on the material! I enjoyed it very much - Anonymous</div>
-
-<div class="well testimony">Hey all - I've just finished the Mooc - thanks for an excellent course and a thouroughly interesting look at a new way to program :smile: Looking forward to starting to play with Pharo on some upcoming ideas I've had 👌3  - Anonymous</div>
-
-<div class="well testimony">I already had previous Smalltalk experience, but yes, I'm extremely happy Chapter 7 has been extremely fulfilling - Anonymous</div>
-
-<div class="well testimony">A general comment I wanted to make is that the MOOC so far has been great. Impressed with the quality and content, and grateful that it is available and free. Many thanks! - Aryeh</div>
-
-<div class="well testimony">IMHO the videos were very well done. I would even say shockingly well done… for a bunch of programmers who are supposed to be clueless about design - SeanDeNigris - 10/26/2017</div>
-
-<div class="well testimony">The more I learning about @pharoproject the more I appreciate it's beauty and simplicity, finally, object-oriented programming is done right - MAQBOOL</div>
-
-<div class="well testimony">Mooc absolument remarquable. Superbe voyage autour de Pharo. Le paradigme objet qui (re)prend enfin du sens ! - Anonymous - 01/03/2019</div>
-
- </section>
-
-<section id="about-course">
-                <h2>About this course</h2>
-                <p>If you are either a beginner or an expert in object-oriented programming, this MOOC will change the way you program with objects: come and learn or rediscover object-oriented programming with Pharo! <p>Pharo is a pure object-oriented programming language in
-                        the tradition of Smalltalk. It offers a unique developing
-                        experience in constant interaction with live objects.
-                        Pharo is elegant, fun to use and very powerful. It is very
-                        easy to learn and enables to understand advanced concept
-                        in a natural way. When programming in Pharo, you are
-                        immersed in a world of live objects. You have immediate
-                        feedback at any moment of your development on objects
-                        representing web applications, code itself, graphics,
-                        network.
-					<a href="#about-details" data-toggle="collapse">More…</a></p>
-
-                <div class="collapse" id="about-details">
-
-
-                    <p>Pharo is also a very powerful open-source environment
-                        used by companies to develop web applications.</p>
-
-                    <p>In this MOOC, we will present more specifically Pharo’s
-                        Web stack which changes the way you build web
-                        applications.</p>
-
-                    <p>In addition we will present fundamental programming
-                        concepts and how Pharo uses them. We will present some
-                        coding idioms and Design Patterns to better design
-                        object-oriented applications. Such concepts can be applied
-                        to any object-oriented programming language.</p>
-
-                    <p>This MOOC is intended for people with a programming
-                        experience but everyone motivated could follow the course
-                        thanks to the numerous resources proposed. This MOOC will
-                        also have an interest for computer programming teachers:
-                        Pharo is a good teaching tool for object-oriented
-                        programming and the course will discuss object-oriented
-                        design principles (e.g. polymorphism, message sending,
-                        self/super, design patterns).</p>
-
-                    <p>Throughout this MOOC you will :</p>
-
-                    <ul>
-    <li>learn how to program in Pharo,</li>
-    <li>be immersed in a live environment and live a new
-                            programming experience,</li>
-    <li>develop a web application to apply the different
-                            aspects of Pharo presented in the course.</li>
-                    </ul>
-                    <p>This MOOC will also provide a new vision of the
-                        fundamental principles of object-oriented programming,
-                        i.e. polymorphism and late binding.</p>
-
-                    <p>This course lasts 7 weeks.</p>
-                    <p>Each week is composed of several sequences containing a
-                        video lecture, quizzes and other videos proposing
-                        application exercises and programming demonstrations.</p>
-                    <p>This course is proposed in french and in english.
-                        Videos are in french with french and english subtitles.
-                        Pdf course documents (in english only) will be available.
-                        All other materials (quizzes, explanation texts…) will be
-                        offered in both languages.</p>
-                </div> <!-- details -->
-            </section>
-
-				<section>
-					<h2>How to follow this MOOC?</h2>
-
-					We propose five profiles to follow this MOOC at different speed and levels. The Mooc sequences will be tagged according to these profiles. The profiles are not exclusive: to become a pharo expert you need to start as a newbie and grow up. Of course, you can also follow the full MOOC.
-
-					<ul>
-					<li>🐥 <b>Total newbies [Newbies]</b>
-						 Focus on the beginning of the lectures, you can skip the Seaside/Mongo and tinyBlog exercises. Follow the end of the Mooc but without trying to understand everything. Take it easy and spend time understanding that the system is written in itself. Focus on the navigation tools (senders and implementors).</li>
-
-					<li>🌐 <b>Looking for Web [Web]</b>
-						For those that focus on web development, we suggest to get started with the syntax (since we really love this lecture you should really watch the not implementation and sequels), then look at Seaside/Mongo combo. From the exercise stand point, focus on tinychat and tinyblog.</li>
-
-					<li>🎁 <b>Refresh your OO perspective [OO]</b>
-						 If you want to rethink your OO perspective, pay attention that even Pharo essential libraries such as Booleans or collections are plain objects. Yes you send a message to a collection to perform a loop. Yes you send a message to a Boolean to perform a conditional.</li>
-
-					<li>🌶 <b>Wanna be a Pharo expert [Xpert]</b>
-						Well it means that you should have a look at everything. You may drop the Web and the Black Magic parts if you are in a hurry.
-					</li>
-
-					<li>🔮 <b>Looking for Black Magic [Magic]</b>
-If you are interesting by really advanced notions close to black magic ;-) It explains things such as reflection, meta-classes, meta-programming, etc. that makes Pharo a unique OO language. Of course, these lectures require almost everything except the Web part.</li>
-					</ul>
-
-					</section>
-
-
-
-           <section id="download">
-               <h2>Download & Install Pharo for this MOOC</h2>
-
-					<p>The MOOC was recorded with Pharo 8, but <strong>its content is still fully valid in Pharo 14</strong>:
-the language, the object model and the design lessons have not changed. The user interface shown in the videos
-is older, so some menus and tools look slightly different in recent Pharo versions.</p>
-<p>We recommend installing Pharo with the Pharo Launcher:</p>
-
-<div class="teaser">
-<ol>
-<li>Download and install the <a class="btn download" href="https://pharo.org/download"><i class="fa fa-download"></i> Pharo Launcher</a> for your OS.</li>
-<li>Run Pharo Launcher and select the <strong>create image</strong> menu entry in the contextual menu of <strong>Pharo Mooc</strong>.
-<br/><img class="img-responsive install-shot" alt="Creating the Pharo MOOC image in Pharo Launcher" src="pictures/createPharoMOOCImage.png"/>
-</li>
-<li>Select your newly created Pharo Mooc image in the right pane and click on the green play button in the upper-right button bar.
-<br/><img class="img-responsive install-shot" alt="Launching the Pharo MOOC image in Pharo Launcher" src="pictures/LaunchPharoMOOCImage.png"/>
-</li>
-</ol>
-</div>
-
-           </section>
-
-<!-- ================================================================================ -->
-<section id="week1">
-<!-- ================================================================================ -->
-<h2>Week 1: Welcome on Board and Syntax Discovery</h2>
-<p>
-    Download the
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/">slides and exercises</a>,
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/">EN videos</a>, <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/">FR videos</a>,
-<a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/">Subtitles</a>(french, english, spanish and japanese).
-    Watch <a href="https://www.youtube.com/watch?v=JUKIjdjGjBU&list=PL2okA_2qDJ-kCHVcNXdO5wsUZJCY31zwf">EN videos</a> or <a href="https://www.youtube.com/watch?v=-Sk_35lB-EI&list=PL2okA_2qDJ-k83Kxu_d8EPzMXtvCrReRn">FR videos</a>.
-</p>
-<ol>
-
-<li>🐥<span class="label label-primary">Lecture</span> Objectives of this MOOC <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S01-ObjectivesMooc.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S1-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S1-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Pharo: an Immersive Object-Oriented System <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S02-WhatIsPharo.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S2-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S2-v2.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Pharo Vision <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S03-PharoVision.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S3-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S3-v2.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Pharo Object Model in a Nutshell <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S04-PharoModelInaNushell.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S4-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S4-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Pharo Syntax in a Nutshell <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S05-PharoSyntaxInANutshell.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a class="erratum" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S05-PharoSyntaxInANutshell.pillar.erratum"><i class="fa fa-exclamation-triangle"></i> Erratum</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S5-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S5-v2.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Class and Method Definitions <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/C019-W1S06-ClassAndMethodDefinition.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/C019SD-W1-S6--EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/C019SD-W1-S6-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-success">Live</span> Live A: Selecting Expressions <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-LiveA-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-LiveA-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-success">Live</span> Live B: Prof Stef <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-LiveB-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-LiveB-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-success">Live</span> Live C: Syntax Highlighting gives Feedback <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-LiveC-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-LiveC-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-success">Live</span> Live D: Learn Keyboard Shortcuts <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-LiveD-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-LiveD-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-info">Redo</span> Redo 1: Packages, classes and methods <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo1-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo1-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-info">Redo</span> Redo 2: Adding some unit tests <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo2-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo2-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-info">Redo</span> Redo 3: Looking back at method creation <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo3-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo3-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-info">Redo</span> Redo 4: Save your code with Iceberg <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo4-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo4-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-info">Redo</span> Redo 5: Object initialization <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo5-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo5-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-info">Redo</span> Redo 6: Better printing with printOn: <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo6-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo6-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-info">Redo</span> Redo 7: Looking a commit history and changes with Iceberg <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week1/W1-Redo7-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week1/W1-Redo7-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-warning">Exercise</span> Expressions and Messages <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/Exo-Expressions-LiteralObjects.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/Exo-Expressions-LiteralObjects-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🐥<span class="label label-warning">Exercise</span> TinyBlog: Presentation and Model <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/TinyBlog-EN_Chapter1and2.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/TinyBlog-FR_Chapter1and2.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🐥<span class="label label-warning">Exercise</span> Developing a Simple Counter (companion of Redo 1–7) <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/Exo-Counter.pdf"><i class="fa fa-file-pdf-o"></i> EN</a></span></li>
-<li>🌶<span class="label label-danger">Challenge</span> Challenge 0 <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/Challenge0-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week1/Challenge0-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-</ol>
-</section>
-
-<!-- ================================================================================ -->
-<section id="week2">
-<!-- ================================================================================ -->
-<h2>Week 2: Pharo Syntax, Blocks and Inspector</h2>
-<p>
-    Download the
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/">slides and exercises</a>,
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/">EN videos</a>, <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/">FR videos</a>,
-<a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/">Subtitles</a>(french, english, spanish and japanese).
-    Watch <a href="https://www.youtube.com/watch?v=JUKIjdjGjBU&list=PL2okA_2qDJ-kCHVcNXdO5wsUZJCY31zwf">EN videos</a> or <a href="https://www.youtube.com/watch?v=-Sk_35lB-EI&list=PL2okA_2qDJ-k83Kxu_d8EPzMXtvCrReRn">FR videos</a>.
-</p>
-
-<ol>
-<li>🐥<span class="label label-primary">Lecture</span> Understanding Messages <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S01-Messages.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S1-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S1-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Messages for Java programmer <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S02-Messages-ForTheJavaProgrammers.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S2-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S2-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Messages: Composition and Precedence <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S03-Messages-Precedence.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a class="erratum" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S03-Messages-Precedence.pillar.erratum"><i class="fa fa-exclamation-triangle"></i> Erratum</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S3-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S3-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Understanding Messages: Sequence and Cascade <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S04-Messages-Sequence.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S4-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S4-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Introduction to Blocks <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S06-Blocks.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S6-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S6-v2.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Loops <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S07-Loops.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S7-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S7-v2.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Booleans and Conditions <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S08-BooleansAndCondition.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S8-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S8-v2.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Parenthesis vs Square Brackets <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S09-ParenthesisVsSquareBrackets.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S9-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S9-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-primary">Lecture</span> Yourself <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S10-Yourself.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a class="erratum" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S10-Yourself.pillar.erratum"><i class="fa fa-exclamation-triangle"></i> Erratum</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S10-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S10-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🎁<span class="label label-primary">Lecture</span> The Essence of Dispatch through an Exercise <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/C019-W2S11-Design-EssenceOfDispatchExo.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/C019SD-W2-S11-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/C019SD-W2-S11-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-success">Live</span> Live A: Finding methods with the Finder <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/W2-LiveA-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/W2-LiveA-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-success">Live</span> Live B: Look closer at objects with the Inspector <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/W2-LiveB-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/W2-LiveB-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-success">Live</span> Live C: Browsing a class <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/W2-LiveC-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/W2-LiveC-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-success">Live</span> Live D: Working with scoped operations <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/W2-LiveD-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/W2-LiveD-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-info">Redo</span> Redo 1:Xtreme TDD <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week2/W2-Redo-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week2/W2-Redo-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥<span class="label label-warning">Exercise</span> Solution: Expressions and Messages <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Exo-Expressions-LiteralObjects-Solution.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Exo-Expressions-LiteralObjects-Solution-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🐥<span class="label label-warning">Exercise</span> Expression Results <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Exo-ObjectsExpressions.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Exo-ObjectsExpressions-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🐥<span class="label label-warning">Exercise</span> TinyBlog: Extending and Testing the Model <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/TinyBlog-EN_Chapter3.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/TinyBlog-FR_Chapter3.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🌶 <span class="label label-danger">Challenge</span> Solution: Challenge 0 <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Challenge0-Solution-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Challenge0-Solution-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🌶 <span class="label label-danger">Challenge</span> Challenge 1 <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Challenge1-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week2/Challenge1-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-</ol>
-</section>
-
-<!-- ================================================================================ -->
-<section id="week3">
-<!-- ================================================================================ -->
-
-<h2>Week 3: Design, Class Methods and Collections</h2>
-<p>
-    Download the
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/">slides and exercises</a>,
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/">EN videos</a>, <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/">FR videos</a>,
-<a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/">Subtitles</a>(french, english, spanish and japanese).
-    Watch <a href="https://www.youtube.com/watch?v=JUKIjdjGjBU&list=PL2okA_2qDJ-kCHVcNXdO5wsUZJCY31zwf">EN videos</a> or <a href="https://www.youtube.com/watch?v=-Sk_35lB-EI&list=PL2okA_2qDJ-k83Kxu_d8EPzMXtvCrReRn">FR videos</a>.
-</p>
-
-<ol>
-<li>🐥 <span class="label label-primary">Lecture</span> Essence of Dispatch: Taking Pharo Booleans as Example <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S01-Design-EssenceOfDispatchNot.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S1-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S1-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Essence of Dispatch <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S02-Design-EssenceOfDispatch.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S2-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S2-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Variables <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S03-Basic-Variables.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S3-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S3-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥🌐 <span class="label label-primary">Lecture</span> A Simple HTTP Application: a Pretext to Revisit Pharo Syntax <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S04-TeapotAsAPretext.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S4-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S4-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Class Methods <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S06-BasicClassMethods.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S6-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S6-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> An Overview of Essential Collections <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S07-Basic-ArraySetOrderedCollection.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a class="erratum" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S07-Basic-ArraySetOrderedCollection.pillar.erratum"><i class="fa fa-exclamation-triangle"></i> Erratum</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S7-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S7-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🎁 <span class="label label-primary">Lecture</span> Iterators <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S09-Iterators.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a class="erratum" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S09-Iterators.pillar.erratum"><i class="fa fa-exclamation-triangle"></i> Erratum</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S9-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S9-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Stream Overview <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S10-Streams.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a class="erratum" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S10-Streams.pillar.erratum"><i class="fa fa-exclamation-triangle"></i> Erratum</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S10-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S10-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Understanding Return <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/C019-W3S11-UnderstandingReturn.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/C019SD-W3-S11-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/C019SD-W3-S11-v1.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-success">Live</span> Live A: Understanding Implementor/Senders <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/W3-LiveA-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/W3-LiveA-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-success">Live</span> Live B: Understanding class references <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/W3-LiveB-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/W3-LiveB-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-success">Live</span> Live C: Find information using Spotter <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/W3-LiveC-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/W3-LiveC-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-info">Redo</span> Redo 1: Implementing Die mechanics <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/W3-Redo1-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/W3-Redo1-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-info">Redo</span> Redo 2: Implementing a Die handle <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/W3-Redo2-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/W3-Redo2-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-info">Redo</span> Redo 3: Finalizing the DSL <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week3/W3-Redo3-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week3/W3-Redo3-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-warning">Exercise</span> Solution: Expression Results <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Exo-ObjectsExpressions-Solution.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Exo-ObjectsExpressions-Solution-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🐥 <span class="label label-warning">Exercise</span> Rewriting Expressions <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Exo-Expressions-Rewriting.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Exo-Expressions-Rewriting-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🐥 <span class="label label-warning">Exercise</span> Crafting a Simple Embedded DSL for Dice (companion of Redo 1–3) <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Exo-DSL-V2.pdf"><i class="fa fa-file-pdf-o"></i> EN</a></span></li>
-<li>🌶 <span class="label label-danger">Challenge</span> Solution: Challenge 1 <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Challenge1-Solution-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Challenge1-Solution-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🌶 <span class="label label-danger">Challenge</span> Challenge 2 <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Challenge2-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week3/Challenge2-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-</ol>
-</section>
-
-<!-- ================================================================================ -->
-<section id="week4">
-<!-- ================================================================================ -->
-<h2>Week 4: Inheritance & Lookup and Web Development</h2>
-<p>
-    Download the
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/">slides and exercises</a>,
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/">EN videos</a>, <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/">FR videos</a>,
-<a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/">Subtitles</a>(french, english, spanish and japanese).
-    Watch <a href="https://www.youtube.com/watch?v=JUKIjdjGjBU&list=PL2okA_2qDJ-kCHVcNXdO5wsUZJCY31zwf">EN videos</a> or <a href="https://www.youtube.com/watch?v=-Sk_35lB-EI&list=PL2okA_2qDJ-k83Kxu_d8EPzMXtvCrReRn">FR videos</a>.
-</p>
-
-<ol>
-<li>🐥 <span class="label label-primary">Lecture</span> Inheritance Basics <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S01-InheritanceAndLookup-1-Inheritance.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S1-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S1-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Inheritance & Lookup: Lookup <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S02-InheritanceAndLookup-2-Lookup.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S2-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S2-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Inheritance & Lookup: Super <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S03-InheritanceAndLookup-3-Super.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S3-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S3-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Inheritance & Lookup: DoesNotUnderstand: <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S04-InheritanceAndLookup-4-DoesNotUnderstand.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S4-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S4-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌶 <span class="label label-primary">Lecture</span> Inheritance & Lookup: Lookup in Metaclasses <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S05-InheritanceAndLookup-5-LookupMetaclasses.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S5-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S5-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🎁 <span class="label label-primary">Lecture</span> Class Methods at Work <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S06-ClassMethodsAtWork.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S6-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S6-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌐 <span class="label label-primary">Lecture</span> Overview of Pharo Web Stack <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S07-PharoWebStack.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S7-VoiceOverEN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S7-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌐 <span class="label label-primary">Lecture</span> Seaside: an Innovative Web Application Framework <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S08-Seaside.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S8-VoiceOverEN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S8-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌐 <span class="label label-primary">Lecture</span> Seaside: Rendering Components <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S09-SeasideDSL.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S9-VoiceOverEN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S9-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌐 <span class="label label-primary">Lecture</span> Seaside: a Glance at MetaData and REST <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S10-Seaside-MagritteREST.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S10-VoiceOverEN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S10-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌐 <span class="label label-primary">Lecture</span> Voyage: NoSql Object Database <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/C019-W4S11-Voyage.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/C019SD-W4-S11-VoiceOverEN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/C019SD-W4-S11-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-success">Live</span> Live A: Git: New project creation <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/W4-LiveA-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/W4-LiveA-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-success">Live</span> Live B: Git: Creating a remote repository to an existing project <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/W4-LiveB-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/W4-LiveB-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-success">Live</span> Live C: Loading a project with Metacello <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/W4-LiveC-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/W4-LiveC-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🎁 <span class="label label-success">Live</span> Live D: Applying Refactorings <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/W4-LiveD-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/W4-LiveD-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🎁 <span class="label label-success">Live</span> Live E: Quality checker in action <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week4/W4-LiveE-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week4/W4-LiveE-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-warning">Exercise</span> Solution: Rewriting Expressions <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Exo-Expressions-Rewriting-Solution.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Exo-Expressions-Rewriting-Solution-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🌐 <span class="label label-warning">Exercise</span> TinyBlog: Data Persitency using Voyage and Mongo <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/TinyBlog-EN_Chapter4to7.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/TinyBlog-FR_Chapter4to7.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🌐 <span class="label label-warning">Exercise</span> TinyBlog: Building a Web Interface with Seaside <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/TinyBlog-EN_Chapter4to7.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/TinyBlog-FR_Chapter4to7.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🌐 <span class="label label-warning">Exercise</span> Building a Simple Contact Book Application <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Exo-ContactManager.pdf"><i class="fa fa-file-pdf-o"></i> EN</a></span></li>
-<li>🌶 <span class="label label-danger">Challenge</span> Solution: Challenge 2 <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Challenge2-Solution-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Challenge2-Solution-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🌶 <span class="label label-danger">Challenge</span> Challenge 3 <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Challenge3-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week4/Challenge3-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-</ol>
-</section>
-
-<!-- ================================================================================ -->
-<section id="week5">
-<!-- ================================================================================ -->
-<h2>Week 5: Exception, Debugging and Reflection</h2>
-<p>
-    Download the
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/">slides and exercises</a>,
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/">EN videos</a>, <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/">FR videos</a>,
-<a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/">Subtitles</a>(french, english, spanish and japanese).
-    Watch <a href="https://www.youtube.com/watch?v=JUKIjdjGjBU&list=PL2okA_2qDJ-kCHVcNXdO5wsUZJCY31zwf">EN videos</a> or <a href="https://www.youtube.com/watch?v=-Sk_35lB-EI&list=PL2okA_2qDJ-k83Kxu_d8EPzMXtvCrReRn">FR videos</a>.
-</p>
-
-<ol>
-<li>🌐 <span class="label label-primary">Lecture</span> Seaside: Composing Components <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S01-Seaside-ComposingComponents.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S1-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S1-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🎁 <span class="label label-primary">Lecture</span> Really Understanding Class Methods <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S02-UnderstandingClassMethods.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S2-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S2-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Common Errors <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S03-LearningFromMistake.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S3-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S3-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌶 <span class="label label-primary">Lecture</span> Powerful Exceptions: an Overview <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S04-Exceptions.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S4-EN-V2.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S4-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Debugging in Pharo <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S05-Debugging.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S5-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S5-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> SUnit: Unit Tests in Pharo <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S06-SUnit.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S6-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S6-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌶 <span class="label label-primary">Lecture</span> Files in Pharo <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S07-Files.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S7-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S7-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🔮 <span class="label label-primary">Lecture</span> Reflection: Basic Introspection <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S08-Introspection.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S8-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S8-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌶 <span class="label label-primary">Lecture</span> Benchmarking in Pharo <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/C019-W5S09-Benchmarking.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/C019SD-W5-S9-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/C019SD-W5-S9-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-success">Live</span> Live A: Advanced Spotter actions <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/W5-LiveA-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/W5-LiveA-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-success">Live</span> Live B: First look at the Debugger actions <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/W5-LiveB-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/W5-LiveB-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-success">Live</span> Live C: Find a bug with the debugger <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week5/W5-LiveC-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week5/W5-LiveC-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌐 <span class="label label-warning">Exercise</span> TinyBlog: Building an Admin Seaside Web Interface with Magritte <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/TinyBlog-EN_Chapter8and9.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/TinyBlog-FR_Chapter8and9.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🐥 <span class="label label-warning">Exercise</span> TinyChat <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/Exo-TinyChat-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/Exo-TinyChat-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🌶 <span class="label label-danger">Challenge</span> Solution: Challenge 3 <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/Challenge3-Solution-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/Challenge3-Solution-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🌶 <span class="label label-danger">Challenge</span> Challenge 4 <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/Challenge4-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week5/Challenge4-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-</ol>
-</section>
-
-<!-- ================================================================================ -->
-<section id="week6">
-<!-- ================================================================================ -->
-<h2>Week 6: Rethink Lookup and Advanced Object-Oriented Design</h2>
-<p>
-    Download the
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/">slides and exercises</a>,
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/">EN videos</a>, <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/">FR videos</a>,
-<a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/">Subtitles</a>(french, english, spanish and japanese).
-    Watch <a href="https://www.youtube.com/watch?v=JUKIjdjGjBU&list=PL2okA_2qDJ-kCHVcNXdO5wsUZJCY31zwf">EN videos</a> or <a href="https://www.youtube.com/watch?v=-Sk_35lB-EI&list=PL2okA_2qDJ-k83Kxu_d8EPzMXtvCrReRn">FR videos</a>.
-</p>
-
-<ol>
-
-<li>🎁 <span class="label label-primary">Lecture</span> Did You Really Understand Super? <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S01-DidYouUnderstandSuper.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S1-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S1-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Understanding the Implementation of ifTrue:ifFalse: <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S02-Design-ImplementingIfTrue.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S2-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S2-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🎁 <span class="label label-primary">Lecture</span> Dice new vs. self class new <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S03-SelfSendsDiceHandle.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S3-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S3-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🎁 <span class="label label-primary">Lecture</span> Message sends are plans for reuse <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S04-SelfSendsArePlanForReuse.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a class="erratum" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S04-SelfSendsArePlanForReuse.pillar.erratum"><i class="fa fa-exclamation-triangle"></i> Erratum</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S4-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S4-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🎁 <span class="label label-primary">Lecture</span> Hooks and Templates <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S05-HookAndTemplate.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S5-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S5-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Runtime Architecture <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S06-RuntimeArchitecture.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a class="erratum" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S06-RuntimeArchitecture.pillar.erratum"><i class="fa fa-exclamation-triangle"></i> Erratum</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S6-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S6-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Characters, Strings and Symbols <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S07-CharacterStringSymbol.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S7-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S7-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Dynamic Vs. Literal Arrays <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/C019-W6S08-DynamicVersusLiteralArray.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/C019SD-W6-S8-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/C019SD-W6-S8-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🎁 <span class="label label-success">Live</span> Live A: Customized tabs in the Inspector <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/W6-LiveA-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/W6-LiveA-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌶 <span class="label label-success">Live</span> Live B: Personalize your image startup <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week6/W6-LiveB-EN-final.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week6/W6-LiveB-FR-final.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌐 <span class="label label-warning">Exercise</span> TinyBlog: Deployment <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/TinyBlog/TinyBlog-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/TinyBlog/TinyBlog-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🌶 <span class="label label-danger">Challenge</span> Solution: Challenge 4 <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/Challenge4-Solution-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/Challenge4-Solution-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-<li>🌶 <span class="label label-danger">Challenge</span> Challenge 5 <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/Challenge5-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week6/Challenge5-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-</ol>
-</section>
-
-<!-- ================================================================================ -->
-<section id="week7">
-<!-- ================================================================================ -->
-<h2>Week 7: More on Object-Oriented Design and Testing</h2>
-<p>
-    Download the
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/">slides and exercises</a>,
-    <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/">EN videos</a>, <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/">FR videos</a>,
-<a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/Subtitles/">Subtitles</a>(french, english, spanish and japanese).
-    Watch <a href="https://www.youtube.com/watch?v=JUKIjdjGjBU&list=PL2okA_2qDJ-kCHVcNXdO5wsUZJCY31zwf">EN videos</a> or <a href="https://www.youtube.com/watch?v=-Sk_35lB-EI&list=PL2okA_2qDJ-k83Kxu_d8EPzMXtvCrReRn">FR videos</a>.
-</p>
-<ol>
-<li>🌶 <span class="label label-primary">Lecture</span> Advanced Points on Classes <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S01-AdvancedPointOnClasses.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S1-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S1-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> Variable Size Objects <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S02-VariableClasses.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S2-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S2-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🔮 <span class="label label-primary">Lecture</span> Understanding Metaclasses <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S03-UnderstandingMetaclasses.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S3-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S3-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🔮 <span class="label label-primary">Lecture</span> Reflective Operations for Live Programming <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S04-OtherReflective.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S4-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S4-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🔮 <span class="label label-primary">Lecture</span> DoesNotUnderstand: a Precious Hook <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S05-DoesNotUnderstand.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a class="erratum" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S05-DoesNotUnderstand.pillar.erratum"><i class="fa fa-exclamation-triangle"></i> Erratum</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S5-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S5-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🔮 <span class="label label-primary">Lecture</span> Reflection: Stack as an Object <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S06-thisContext.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S6-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S6-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🎁 <span class="label label-primary">Lecture</span> Avoid Null Checks <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S07-AvoidIsNill.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a class="erratum" href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S07-AvoidIsNill.pillar.erratum"><i class="fa fa-exclamation-triangle"></i> Erratum</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S7-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S7-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🐥 <span class="label label-primary">Lecture</span> A Journey in Pharo: A Bright Future <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/C019-W7S08-Conclusion.pdf"><i class="fa fa-file-pdf-o"></i> Slides</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/EN/Week7/C019SD-W7-S8-EN-V1.mp4"><i class="fa fa-play-circle"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC-Videos/FR/Week7/C019SD-W7-S8-v3.mp4"><i class="fa fa-play-circle"></i> FR</a></span></li>
-<li>🌶 <span class="label label-danger">Challenge</span> Solution: Challenge 5 <span class="res"><a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/Challenge5-Solution-EN.pdf"><i class="fa fa-file-pdf-o"></i> EN</a> <a href="https://rmod-pharo-mooc.lille.inria.fr/MOOC/PharoMOOC/Week7/Challenge5-Solution-FR.pdf"><i class="fa fa-file-pdf-o"></i> FR</a></span></li>
-</ol>
-</section>
-
-			   <section id="resources">
-                <h2>Resources</h2>
-                <p>
-You can find free and online resources in the <a href="https://www.pharo.org/documentation">Documentation</a> page. We recommend the Updated Pharo by Example book, the Pharo cheat-sheet, and the new book Learning Object-Oriented Programming, Design and TDD with Pharo on <a href="https://books.pharo.org/">books.pharo.org</a>
-                </p>
-            </section>
-
-
-			   <section id="about">
-                <h2>About</h2>
-                <div class="row">
-                    <div class="col-xs-4">
-                        <section>
-                            <img alt="Damien Cassou" src="pictures/dcassou.jpg" class="teacher"/>
-                            <h3>Damien Cassou</h3>
-                            <p>Damien Cassou received his PhD degree
-                                in Computer Science from the
-                                University of Bordeaux, France. He is
-                                working as associate professor (maître
-                                de conférences) at the University of
-                                Lille, France, and is a member of the
-                                RMoD research group (Inria, CRIStAL).
-                                Damien is working on dynamic
-                                programming languages (most notably
-                                around traits and modules) and
-                                software engineering (mainly tools for
-                                developers). Damien has co-organized
-                                many events (including ECOOP’14 and
-                                ESUG many times) and co-wrote several
-                                books. Because he loves programming,
-                                Damien is also an active member of the
-                                Smalltalk and Emacs-Lisp communities.
-                                Finally, he maintains many packages
-                                for NixOS.</p>
-                        </section>
-                    </div>
-                    <div class="col-xs-4">
-                        <section>
-                            <img alt="Stéphane Ducasse" src="pictures/sducasse.jpg" class="teacher"/>
-                            <h3>Stéphane Ducasse</h3>
-                            <p>Stéphane Ducasse is directeur de
-                                recherche at Inria. He leads the RMoD
-                                team. He is expert in two domains:
-                                object-oriented language design and
-                                reengineering. His works on traits
-                                have been introduced in AmbientTalk,
-                                Slate, Pharo, Perl-6, PHP 5.4 and
-                                Squeak. They have also
-                                influenced JavaScript, Scala and
-                                Fortress. Stéphane is also expert on
-                                software quality, program
-                                understanding, program visualisations,
-                                reengineering and metamodeling. He is
-                                one of the developers of Pharo. He is
-                                also one of the developers of Moose,
-                                an open-source software analysis
-                                platform. He created Synectique a
-                                company building dedicated tools for
-                                advanced software analysis. Stéphane
-                                wrote several books on programming
-                                learning and other topics such as web
-                                programming.</p>
-                        </section>
-                    </div>
-                    <div class="col-xs-4">
-                        <section>
-                            <img alt="Luc Fabresse" src="pictures/lfabresse.jpg" class="teacher"/>
-                            <h3>Luc Fabresse</h3>
-                            <p>Luc Fabresse received his PhD in
-                                computer science in 2007 from the
-                                University of Montpellier 2,
-                                France. He is currently an
-                                associate professor in the CAR
-                                research theme at Mines Douai,
-                                Mines-Telecom Institute. Luc is
-                                the co-author of several research
-                                papers advocating the use of
-                                dynamic and reflective languages
-                                such as Pharo to support live
-                                programming of mobile and
-                                autonomous robots in an efficient
-                                way. Luc's long-term vision is to
-                                be able to use Jedi mind trick on
-                                mobile robots ;-) Meanwhile, he
-                                concretizes all his ideas (models
-                                and tools) in the PhaROS platform
-                                (a Pharo client for the Robotics
-                                Operating System) to develop,
-                                debug, test, deploy, execute and
-                                benchmark robotics applications.
-                                Each year, Luc gives many computer
-                                science lectures and co-organizes
-                                events (technical days,
-                                conferences, ...). He also
-                                promotes Smalltalk (ESUG board
-                                member) and participates to its
-                                open-source implementation Pharo.</p>
-                        </section>
-                    </div> <!-- column -->
-                </div> <!-- row -->
-            </section>
-            <section>
-                <h2>The Partners</h2>
-                <div class="partners-logos">
-                    <a href="https://www.inria.fr/" target="_blank">
-                        <img alt="logo inria recherche" src="pictures/logo_inria_fr-ptt.jpeg" height="80">
-                    </a>
-                    <a href="https://www.univ-lille.fr/" target="_blank">
-                        <img alt="logo Université de Lille" src="pictures/universite-lille.png" height="90">
-                    </a>
-                    <a href="https://imt-nord-europe.fr/" target="_blank">
-                        <img alt="logo IMT Nord Europe (formerly IMT Lille Douai)" src="pictures/IMT_Lille_Douai_Logo.png" height="100">
-                    </a>
-                    <a href="https://www.agence-nationale-recherche.fr/investissements-d-avenir/appels-a-projets/" target="_blank">
-                        <img alt="logo investissement d'avenir" src="pictures/InvestAvenir.jpg" height="80">
-                    </a>
-
-                    <a href="https://utop.fr/" target="_blank">
-                        <img src="pictures/logo_uTOP.jpg" alt="logo utop" height="70">
-                    </a>
-                    <a href="https://www.unit.eu/" target="_blank">
-                        <img alt="logo unit" src="pictures/unit.png" height="80">
-                    </a>
-                    <a href="https://www.unisciel.fr/" target="_blank">
-                        <img alt="logo unisciel" src="pictures/logo_Unisciel.png" height="70">
-                    </a>
-                    <!-- <a href="https://www.mines-telecom.fr/" target="_blank">
-                        <img alt="logo Mines Telecom" src="pictures/mines-telecom.png" height="100">
-                    </a> -->
-                    <a href="https://www.canal-u.tv/producteurs/inria/cours_en_ligne/live_object_programming_in_pharo" target="_blank">
-                        <img alt="logo CanalU" src="pictures/canalU.png" height="70">
-                    </a>
-                </div> <!-- partners-logos -->
-            </section>
-            <footer class="text-center">
-                <p>This webpage is hosted in <a href="https://github.com/SquareBracketAssociates/PharoMooc-website">github</a>.</p>
-            </footer>
-        </div> <!-- end of container -->
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
-        </script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js">
-        </script>
-    </body>
+</body>
 </html>
